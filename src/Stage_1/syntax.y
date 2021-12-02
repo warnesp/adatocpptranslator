@@ -46,7 +46,8 @@
 #include <stdlib.h>
 
 #include "../src/Tools/tree.h"
-
+#define YYMAXDEPTH 50000
+#define YYINITDEPTH 10000
 #define ARBRE
 
 extern int g_LineNumber;
