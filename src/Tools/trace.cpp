@@ -45,6 +45,18 @@ void printfTraceUp(const char *p_functionName, const char *p_FileName,int p_line
 	traceLevel++;
 	
 }
+
+void printfTrace(const char *p_functionName, const char *p_FileName,int p_lineNumber)
+{
+	for(int index=0;index<traceLevel;index++)
+	{
+		printf("  ");
+	}
+	
+	printf("-- %s : %s %i\n",p_functionName,p_FileName,p_lineNumber);
+	
+}
+
 void printfTraceDown(const char *p_functionName,const char *p_FileName,int p_lineNumber)
 {
 	int index;

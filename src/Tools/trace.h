@@ -41,6 +41,7 @@
 //	#define TRACE
 
 	void printfTraceUp(const char *p_functionName, const char *p_FileName,int p_lineNumber);
+	void printfTrace(const char *p_functionName, const char *p_FileName,int p_lineNumber);
 	void printfTraceDown(const char *p_functionName, const char *p_FileName,int p_lineNumber);
 
 #endif
