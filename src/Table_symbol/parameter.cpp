@@ -49,6 +49,7 @@ void displayParameterMode(t_ParameterMode p_ParameterMode)
 		case Parameter_In:printf("Parameter_In");break;
 		case Parameter_In_Out:printf("Parameter_In_Out");break;
 		case Parameter_Out:printf("Parameter_Out");break;
+		case Parameter_Access:printf("Parameter_Access");break;
 		case Parameter_Undefined:printf("Parameter_Undefined");	break;
 		default:printf("ERROR : %s %i : parameter mode %i is not manage\n",__FILE__,__LINE__,p_ParameterMode);
 				my_exit(-1);
@@ -168,6 +169,7 @@ parameter* new_parameter(const char *p_Name,tree *p_TypeTree,tree *p_ParameterMo
 			case Node_Ada_Mode_In: p_Mode=Parameter_In;break;
 			case Node_Ada_Mode_In_Out: p_Mode=Parameter_In_Out;break;
 			case Node_Ada_Mode_Out: p_Mode=Parameter_Out;break;
+			case Node_Ada_Mode_Access: p_Mode=Parameter_Access;break;
 			default :
 			errorNotAllowed(__FILE__,__LINE__,p_ParameterModeTree,"mode");
 			my_exit(-1);

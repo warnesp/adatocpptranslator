@@ -51,6 +51,7 @@ typedef enum
 	Parameter_In,
 	Parameter_In_Out,
 	Parameter_Out,
+    Parameter_Access,
 	Parameter_Undefined
 }t_ParameterMode;
 
