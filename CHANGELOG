@@ -1,0 +1,59 @@
+Version 1.0.2 Beta:
+	Correction of bug in:
+	_ analysis of files : correction of bug concerning parsing error on type with attribute in subprog declaration, type declarations
+
+Version 1.0.2 Alpha:
+	Correction of bug in:
+	_ analysis of files : correction of bug concerning parsing error on non decimal (hexadecimal,octal..) values with an exponent
+	_ table symbol creation : correction of bug concerning parsing error on non decimal (hexadecimal,octal..) values with an exponent
+
+	Improvements:
+	_ translation : management of non decimal values ( ex : 2#11# )
+	_ translation : management of procedure call without parameters
+	_ translation : management of use clause
+	_ translation : management of function and procedure access type
+	_ translation : management of declaration of unconstraint array variables
+	_ translation : management of declaration of unconstraint array types
+
+Version 1.0.1:
+	Correction of bug in:
+	_ analysis of files : correction of bug concerning declaration of access types on procedure or function
+
+Version 1.0.1 Beta:
+
+	Improvements:
+	_ parsing : lexer is now case unsensitive.
+
+	Internal improvements:
+	_ Several internal improvements were made between 1.0.1 Alpha and 1.0.1 Beta to prepare the new features which will be added to 1.0.2 release.
+
+Version 1.0.1 Alpha:
+	Correction of bug in:
+	_ analysis of files : correction of bug concerning declaration of access types on procedure or function
+	_ translation : correction of bug concerning data which take place between parenthesis
+	_ translation : correction of bug concerning "&" binary operator
+	_ translation : correction of bug concerning "not in" binary operator
+
+	Improvements:
+	_ translation : add of an include statement which reference package specification during translation of package body.
+	_ translation : better management of brackets replacement by '[' or ']' for arrays
+	_ translation : better management of subprog parameters whose type is an array type.
+	_ translation : add of "(void)" to subprograms' protoptypes which have no parameters
+	_ translation : add of a simple management of exception handler.
+	_ translation : add of a simple management of "in" and "not in" test use with a range.
+	_ translation : add of a simple management of "in" and "not in" test use with a range.
+
+Version 1.0.0:
+	Correction of bug:
+	_ correction of bug concerning declaration of "aliased access type" and "aliased constant access type"
+	_ correction ob bug concerning translation of "aliased" keyword in object declarations.
+	_ correction of bug concerning declaration of "null record" type
+	_ correction of bug concerning declaration of generic formal part with generic parameters
+	_ correction of bug concerning translation of "private" keyword in package
+
+Version 1.0.0Beta:
+	Correction of bug:
+	_ input files which doesn't end by an empty line are managed
+	_ input files with both unix and windows formats are managed
+	_ files whose path contains '\' characters are managed
+	_ correction ob bug concerning extension of files generated from ada package bodies

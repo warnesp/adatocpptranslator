@@ -1,0 +1,2 @@
+test_files\range\range.ads
+test_files\range\range.adb

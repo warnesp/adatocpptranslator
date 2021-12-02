@@ -1,0 +1,11 @@
+To build adatoccpptranslator:
+_ set CPP environment variable with g++ path
+_ set YACC environment variable with bison path
+_ set LEX environment variable with flex path
+_ to build the translator execute command: make
+
+g++ should be at least g++ 3.2
+flex should be at least 2.5.2
+bison should be at least 1.24
+
+Adatoccpptranslator can be build under Linux, Cygwin, Windows ( by using MinGw32)

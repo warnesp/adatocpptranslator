@@ -1,0 +1,4 @@
+test_files/array/main.adb
+test_files/array/test_array_1.adb
+test_files/array/test_array_1.ads
+test_files/array/test_array_2.ads

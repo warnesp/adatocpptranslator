@@ -1,0 +1,1 @@
+test_files/object_decl/test_object_decl.ads

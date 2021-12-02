@@ -1,0 +1,11 @@
+test_files\syntax\test_syntax_1.ads
+test_files\syntax\test_syntax_2.ads
+test_files\syntax\test_syntax_3.ads
+test_files\syntax\test_syntax_4.ads
+test_files\syntax\test_syntax_5.ads
+test_files\syntax\test_syntax_6.ads
+test_files\syntax\test_syntax_7.ads
+test_files\syntax\test_syntax_8.ads
+test_files\syntax\test_syntax_9.ads
+test_files\syntax\test_syntax_10.ads
+test_files\syntax\test_syntax_11.ads

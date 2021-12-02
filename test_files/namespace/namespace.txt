@@ -1,0 +1,4 @@
+./test_files/namespace/main.adb
+./test_files/namespace/test_namespace1.ads
+./test_files/namespace/test_namespace2.ads
+./test_files/namespace/test_namespace3.ads

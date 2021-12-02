@@ -1,0 +1,3 @@
+./test_files/based_numbers/main.adb
+./test_files/based_numbers/test_based_number.adb
+./test_files/based_numbers/test_based_number.ads
