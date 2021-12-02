@@ -44,99 +44,224 @@
 #include "tree_string_representation.h"
 
 class component;
-class constant_number;
 class discrim_spec;
-class file;
-class function_spec;
-class generic_package_inst;
 class main_unit;
 class named;
-class package_body;
-class package_rename;
 class package_spec;
 class parameter;
-class procedure_spec;
-class tree;
-class type;
-class variable;
-class variable_array;
-class variable_object;
 class variant;
 
 /* class list : list of items of class T
 /***********************************************/
 template <class T> class list
 {
-	private:
-	//item in current list
-	T m_Item;
-	//reference on next item
-	list *m_Next;
-	
-	public:
-	
-	 /*****************************************************************************
-	 * Function name : list 
-	 *
-	 * Input : reference on object of class T
-	 * Output : none
-	 * Modified variable : none
-	 * Description : constructor of liste
-	 * it creates a list containing the item given in parameter
-	 * member m_next is initalized whith NULL value
-	 *****************************************************************************/
-	 list(T);
-	
-	int getNbItem(void);
-	
-	/*****************************************************************************
-	 * Function name : ajouter 
-	 *
-	 * Input : object of class T
-	 * Output : none
-	 * Modified variable : this
-	 * Description : function which add the item contained in "item" parameter
-	 * at the end of list if the item is not already in the list
-	 *****************************************************************************/
-	void add(T p_Item);
-	void add(list<T> *p_List);
-	
-	/*****************************************************************************
-	 * Function name : getItem 
-	 *
-	 * Input : none
-	 * Output : an item of class T
-	 * Modified variable : none
-	 * Description : function which returns the first item of the list referenced
-	 * by "this" pointer
-	 *****************************************************************************/
-	T getItem(void);
-	
-	/*****************************************************************************
-	 * Function name : getNext 
-	 *
-	 * Input : none
-	 * Output : reference on an object of class liste
-	 * Modified variable : none
-	 * Description : function which returns a reference on the rest of the list
-	 *****************************************************************************/
-	list* getNext(void);
-	
-	/*****************************************************************************
-	* Function name : afficher 
-	*
-	* Input : none
-	* Output : none
-	* Modified variable : none
-	* Description : function which display the list of item referenced by "this"
-	* pointer
-	*****************************************************************************/
-	void display(FILE *p_Fp);
-	
+    private:
+        //item in current list
+        T m_Item;
+        //reference on next item
+        list *m_Next;
+
+    public:
+
+        /*****************************************************************************
+         * Function name : list 
+         *
+         * Input : reference on object of class T
+         * Output : none
+         * Modified variable : none
+         * Description : constructor of liste
+         * it creates a list containing the item given in parameter
+         * member m_next is initalized whith NULL value
+         *****************************************************************************/
+        list(T p_Item)
+        {
+#ifdef TRACE
+            printfTraceUp("list",__FILE__,__LINE__);
+#endif
+
+            m_Item=p_Item;
+            m_Next=NULL;
+
+#ifdef TRACE
+            printfTraceDown("list",__FILE__,__LINE__);
+#endif
+
+        }
+
+        int getNbItem(void)
+        {
+#ifdef TRACE
+            printfTraceUp("getNbItem",__FILE__,__LINE__);
+#endif
+            int result=0;
+            list *pointer_list=this->getNext();
+            if(m_Item!=NULL)
+            {
+                result=1;
+            }
+
+            while(pointer_list!=NULL)
+            {
+                result++;
+                pointer_list=pointer_list->getNext();
+            }
+
+#ifdef TRACE
+            printfTraceDown("getNbItem",__FILE__,__LINE__);
+#endif
+            return result;
+        }
+
+        /*****************************************************************************
+         * Function name : ajouter 
+         *
+         * Input : object of class T
+         * Output : none
+         * Modified variable : this
+         * Description : function which add the item contained in "item" parameter
+         * at the end of list if the item is not already in the list
+         *****************************************************************************/
+        void add(T p_Item)
+        {
+
+#ifdef TRACE
+            //printfTraceUp("add",__FILE__,__LINE__);
+#endif
+
+            if(m_Next!=NULL)
+            {
+                m_Next->add(p_Item);
+            }
+            else
+            {
+                m_Next=new list(p_Item);
+            }
+#ifdef TRACE
+            //printfTraceDown("add",__FILE__,__LINE__);
+#endif
+
+        }
+
+        void add(list<T> *p_List)
+        {
+
+#ifdef TRACE
+            //printfTraceUp("add",__FILE__,__LINE__);
+#endif
+
+            if(m_Next!=NULL)
+            {
+                m_Next->add(p_List);
+            }
+            else
+            {
+                m_Next=p_List;
+            }
+#ifdef TRACE
+            //printfTraceDown("add",__FILE__,__LINE__);
+#endif
+
+        }
+
+
+
+        /*****************************************************************************
+         * Function name : getItem 
+         *
+         * Input : none
+         * Output : an item of class T
+         * Modified variable : none
+         * Description : function which returns the first item of the list referenced
+         * by "this" pointer
+         *****************************************************************************/
+        T getItem(void)
+        {
+            return m_Item;
+        }
+
+        /*****************************************************************************
+         * Function name : getNext 
+         *
+         * Input : none
+         * Output : reference on an object of class liste
+         * Modified variable : none
+         * Description : function which returns a reference on the rest of the list
+         *****************************************************************************/
+        list<T>* getNext(void)
+        {
+            return m_Next;
+        }
+
+
+
+
+        /*****************************************************************************
+         * Function name : afficher 
+         *
+         * Input : none
+         * Output : none
+         * Modified variable : none
+         * Description : function which display the list of item referenced by "this"
+         * pointer
+         *****************************************************************************/
+        void display(FILE *p_Fp)
+        {
+            m_Item->display();
+            if(m_Next!=NULL)
+            {
+                m_Next->display(p_Fp);;
+            }
+
+        }
+
+
 };
 
-template<class T> list<T>* add(T p_Item,list<T>* p_List);
-template<class T> list<T>* cat(list<T>* p_List1,list<T>* p_List2);
+template<class T> list<T>* add(T p_Item,list<T> *p_List)
+{
+	
+	#ifdef TRACE
+	printfTraceUp("add",__FILE__,__LINE__);
+	#endif
+	if(p_List!=NULL)
+	{
+		p_List->add(p_Item);
+	}
+	else
+	{
+		p_List=new list<T>(p_Item);
+	}
+	#ifdef TRACE
+	printfTraceDown("add",__FILE__,__LINE__);
+	#endif
+	
+	return p_List;
+}
+
+template<class T> list<T>* cat(list<T> *p_List1,list<T> *p_List2)
+{
+	
+	#ifdef TRACE
+	printfTraceUp("cat",__FILE__,__LINE__);
+	#endif
+	list<T> *l_Result=p_List1;
+	if(p_List1!=NULL)
+	{
+		if(p_List2!=NULL)
+		{
+			p_List1->add(p_List2);
+		}
+	}
+	else
+	{
+		l_Result=p_List2;
+	}
+	#ifdef TRACE
+	printfTraceDown("cat",__FILE__,__LINE__);
+	#endif
+	
+	return l_Result;
+}
 
 list<tree*>* getListChoice(tree *p_Tree,list<tree*> *p_Trees);
 
@@ -154,4 +279,5 @@ list<parameter*>* getListParameter(tree *p_Tree,list<parameter*> *p_Parameters,t
 list<tree*>* getListTree(tree *p_Tree,list<tree*> *p_Trees);
 
 list<variant*>* getListVariant(tree *p_Tree,list<variant*>* p_Variants);
+
 #endif

@@ -32,6 +32,15 @@
 	#include "../Tools/trace.h"
 	#include "../Tools/list.h"
 		
+class constant_number;
+class function_spec;
+class package_body;
+class package_rename;
+class procedure_spec;
+class type;
+class variable_array;
+class variable_object;
+
 	class table_symbol
 	{
 		public:
