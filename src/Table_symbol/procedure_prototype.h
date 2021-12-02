@@ -43,7 +43,7 @@ class procedure_prototype
 	list<parameter*>* getParameters(void);
 	parameter* getParameter(char *p_Name);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	procedure_prototype(void);
 	procedure_prototype(tree *p_FormalPartTree,main_unit *p_MainUnit);	

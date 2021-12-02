@@ -49,13 +49,13 @@ class float_type: public real_type
 	public:
 	tree* getDigit(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	float_type(void);
-	float_type(char *p_Name,tree *p_Digit,main_unit *p_MainUnit);
-	float_type(char *p_Name,tree *p_Digit,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
+	float_type(const char *p_Name,tree *p_Digit,main_unit *p_MainUnit);
+	float_type(const char *p_Name,tree *p_Digit,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
 	
 };
 
-float_type* new_float_type(char *p_Name,tree *p_Digit, tree *p_Range,main_unit *p_MainUnit);	
+float_type* new_float_type(const char *p_Name,tree *p_Digit, tree *p_Range,main_unit *p_MainUnit);	
 #endif

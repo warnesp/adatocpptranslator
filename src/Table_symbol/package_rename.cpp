@@ -37,7 +37,7 @@ char package_rename::getBoolGeneric(void)
 	return m_BoolGeneric;
 }
 	
-void package_rename::checkIntegrity(char *p_FileName,int p_LineNumber)
+void package_rename::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -50,7 +50,7 @@ void package_rename::checkIntegrity(char *p_FileName,int p_LineNumber)
 	
 }
 
-package_rename::package_rename(char *p_PackageName,char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit):unit(p_PackageName,p_MainUnit),renamed(p_OriginalName)
+package_rename::package_rename(const char *p_PackageName,const char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit):unit(p_PackageName,p_MainUnit),renamed(p_OriginalName)
 {
 	#ifdef TRACE
 	printfTraceUp("package_rename",__FILE__,__LINE__);

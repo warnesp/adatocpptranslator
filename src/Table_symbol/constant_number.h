@@ -56,10 +56,10 @@ class constant_number : public unit,public initialised
 	public :
 	
 	void display(FILE *p_Fp);
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	constant_number();
-	constant_number(char *p_Name,tree * p_InitTree,main_unit *p_MainUnit);
+	constant_number(const char *p_Name,tree * p_InitTree,main_unit *p_MainUnit);
 };
 
 #endif

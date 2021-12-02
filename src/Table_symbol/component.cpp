@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "component.h"
 
-void component::checkIntegrity(char *p_FileName, int p_LineNumber)
+void component::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -63,7 +63,7 @@ component::component(void):named(),object(),subtyped()
 	
 }
 
-component::component(char *p_Name,char p_Aliased,subtyped *p_Subtyped):named(p_Name),object(p_Aliased),subtyped(p_Subtyped)
+component::component(const char *p_Name,char p_Aliased,subtyped *p_Subtyped):named(p_Name),object(p_Aliased),subtyped(p_Subtyped)
 {
 	#ifdef TRACE
 	printfTraceUp("component",__FILE__,__LINE__);
@@ -73,7 +73,7 @@ component::component(char *p_Name,char p_Aliased,subtyped *p_Subtyped):named(p_N
 	#endif
 }
 
-component::component(char *p_Name,char p_Aliased,subtyped *p_Subtyped,tree *p_InitTree):named(p_Name),object(p_Aliased,p_InitTree),subtyped(p_Subtyped)
+component::component(const char *p_Name,char p_Aliased,subtyped *p_Subtyped,tree *p_InitTree):named(p_Name),object(p_Aliased,p_InitTree),subtyped(p_Subtyped)
 {
 	#ifdef TRACE
 	printfTraceUp("component",__FILE__,__LINE__);
@@ -83,7 +83,7 @@ component::component(char *p_Name,char p_Aliased,subtyped *p_Subtyped,tree *p_In
 	#endif
 }
 
-component* new_component(char *p_Name,tree *p_ComponentSubtypeDefTree, tree *p_InitTree)
+component* new_component(const char *p_Name,tree *p_ComponentSubtypeDefTree, tree *p_InitTree)
 {
 	#ifdef TRACE
 	printfTraceUp("new_component",__FILE__,__LINE__);

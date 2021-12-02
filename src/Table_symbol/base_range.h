@@ -50,7 +50,7 @@ class base_range: public range
 	
 	public:
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	tree* getLowerBound(void);
 	tree* getUpperBound(void);
 	

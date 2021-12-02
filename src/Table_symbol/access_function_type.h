@@ -52,9 +52,9 @@ class access_function_type: public access_subprog_type
 	private:
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	access_function_type(void);
-	access_function_type(char *p_Name,tree *p_ProtectedTree,tree *p_FormalPartTree, tree *p_ReturnTypeTree,main_unit *p_MainUnit);
+	access_function_type(const char *p_Name,tree *p_ProtectedTree,tree *p_FormalPartTree, tree *p_ReturnTypeTree,main_unit *p_MainUnit);
 };
 #endif

@@ -40,7 +40,7 @@ void constant_number::display(FILE *p_Fp)
 	this->checkIntegrity(__FILE__,__LINE__);	 
 }
 
-void constant_number::checkIntegrity(char *p_FileName,int p_LineNumber)
+void constant_number::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -69,7 +69,7 @@ constant_number::constant_number():unit(),initialised()
 	printfTraceDown("constant_number",__FILE__,__LINE__);
 	#endif
 }
-constant_number::constant_number(char *p_Name,tree * p_InitTree,main_unit *p_MainUnit):unit(p_Name,p_MainUnit),initialised(p_InitTree)
+constant_number::constant_number(const char *p_Name,tree * p_InitTree,main_unit *p_MainUnit):unit(p_Name,p_MainUnit),initialised(p_InitTree)
 {
 	#ifdef TRACE
 	printfTraceUp("constant_number",__FILE__,__LINE__);

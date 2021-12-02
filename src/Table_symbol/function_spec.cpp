@@ -46,12 +46,12 @@
 
 #include "function_prototype.h"
 
-char* function_spec::getTypeName(void)
+const char* function_spec::getTypeName(void)
 {
-	//return m_Prototype->getTypeName();
+	return m_Prototype->getTypeName();
 }
 
-void function_spec::checkIntegrity(char *p_FileName, int p_LineNumber)
+void function_spec::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -79,7 +79,7 @@ void function_spec::checkIntegrity(char *p_FileName, int p_LineNumber)
 		#endif
 	}
 
-	function_spec::function_spec(char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,main_unit *p_MainUnit):unit(p_Name,p_MainUnit)
+	function_spec::function_spec(const char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,main_unit *p_MainUnit):unit(p_Name,p_MainUnit)
 	{
 		#ifdef TRACE
 		printfTraceUp("function_spec",__FILE__,__LINE__);

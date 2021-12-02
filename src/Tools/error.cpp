@@ -41,31 +41,31 @@
  *****************************************************************************/
 #include "error.h"
 
-void errorIsNull(char *p_FileName,int p_LineNumber,char *p_Name)
+void errorIsNull(const char *p_FileName,int p_LineNumber, const char *p_Name)
 {
 	printf("INTERNAL ERROR : %s %i : \"%s\" is NULL\n",p_FileName,p_LineNumber,p_Name);
 }
 
-void errorLogManage(FILE *p_Fp,int p_NumLine,char *p_Comment)
+void errorLogManage(FILE *p_Fp,int p_NumLine, const char *p_Comment)
 {
 	fprintf(p_Fp,"line %i ( in ada file ) : %s is not managed\n",p_NumLine,p_Comment);
 }
 
-void errorNbSon(char *p_FileName,int p_LineNumber,tree *p_Tree)
+void errorNbSon(const char *p_FileName,int p_LineNumber,tree *p_Tree)
 {
 	printf("INTERNAL ERROR : %s %i : nb son \"%i\" is not allowed by grammar for node \"",p_FileName,p_LineNumber,p_Tree->getNbSon());
 	displayNodeType(p_Tree->getNodeType());
 	printf("\" at ligne %i\n", p_Tree->getNumLine());
 }
 
-void errorNotAllowed(char *p_FileName,int p_LineNumber,tree *p_Tree, char *p_RuleName)
+void errorNotAllowed(const char *p_FileName,int p_LineNumber,tree *p_Tree, const char *p_RuleName)
 {
 	printf("INTERNAL ERROR : %s %i : node type \"",p_FileName,p_LineNumber);
 	displayNodeType(p_Tree->getNodeType());
 	printf("\" line %i is not allowed by ada grammar in rule \"%s\"\n",p_Tree->getNumLine(),p_RuleName);
 }
 
-void errorGeneric(char *p_FileName,int p_LineNumber,char *p_ErrorMessage)
+void errorGeneric(const char *p_FileName,int p_LineNumber, const char *p_ErrorMessage)
 {
 		printf("INTERNAL ERROR : %s %i : %s\n",p_FileName,p_LineNumber,p_ErrorMessage);
 }

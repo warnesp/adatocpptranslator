@@ -48,7 +48,7 @@ int main(int argc, char** argv)
 		exit(-1);
 	}
 	
-	char *l_Name = argv[1];
+	const char *l_Name = argv[1];
 	
 	// analyse of input file
 	printf("*************************\n* Analyse of input file *\n*************************\n");
@@ -142,7 +142,7 @@ int main(int argc, char** argv)
 		
 		/* type determination of output file */
 		char l_BoolHeader = g_CurrentFile->getBoolHeader();
-		char *l_Extension = NULL;
+		const char *l_Extension = NULL;
 
 		if(l_BoolHeader == 0)
 		{

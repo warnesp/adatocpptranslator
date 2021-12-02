@@ -32,7 +32,7 @@
 #include "trace.h"
 int traceLevel=0;
 
-void printfTraceUp(char *p_functionName,char *p_FileName,int p_lineNumber)
+void printfTraceUp(const char *p_functionName, const char *p_FileName,int p_lineNumber)
 {
 	int index;
 	
@@ -45,7 +45,7 @@ void printfTraceUp(char *p_functionName,char *p_FileName,int p_lineNumber)
 	traceLevel++;
 	
 }
-void printfTraceDown(char *p_functionName,char *p_FileName,int p_lineNumber)
+void printfTraceDown(const char *p_functionName,const char *p_FileName,int p_lineNumber)
 {
 	int index;
 	traceLevel--;

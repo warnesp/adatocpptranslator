@@ -56,7 +56,7 @@ class subtyped: public typed
 	char getBoolConstraint(void);
 	tree* getConstraint(void);
 	
-	void checkIntegrity(char *p_FileName, int p_Linenumber);
+	void checkIntegrity(const char *p_FileName, int p_Linenumber);
 	
 	subtyped(void);
 	subtyped(subtyped *p_Subtyped);

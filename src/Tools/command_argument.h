@@ -38,5 +38,5 @@
 #include "../Table_symbol/file.h"
 #include "file_management.h"
 
-list<file*>* createListFile(char *p_Name);
+list<file*>* createListFile(const char *p_Name);
 #endif

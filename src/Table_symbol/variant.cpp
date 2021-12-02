@@ -42,7 +42,7 @@ component_list* variant::getComponentList(void)
 	return m_ComponentList;
 }
 
-void variant::checkIntegrity(char *p_FileName, int p_LineNumber)
+void variant::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

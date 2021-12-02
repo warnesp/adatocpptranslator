@@ -49,7 +49,7 @@ typedef enum
 	Type_Undefined,
 }t_TypeId;
 
-void errorNotManage(char *p_FileName,int p_LineNumber,t_TypeId p_TypeId);
+void errorNotManage(const char *p_FileName,int p_LineNumber,t_TypeId p_TypeId);
 void displayTypeId(t_TypeId p_TypeId);
 
 class type: public unit 
@@ -58,11 +58,11 @@ class type: public unit
 	t_TypeId m_TypeId;
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	t_TypeId getTypeId(void);
 	
 	type(void);
 	type(t_TypeId p_TypeId);
-	type(t_TypeId p_TypeId,char *p_Name,main_unit *p_MainUnit);
+	type(t_TypeId p_TypeId,const char *p_Name,main_unit *p_MainUnit);
 };
 #endif

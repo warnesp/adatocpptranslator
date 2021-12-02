@@ -59,7 +59,7 @@ class range
 	t_RangeId m_RangeId;
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	range(void);
 	range(t_RangeId p_RangeId);

@@ -28,9 +28,14 @@
  *
  *
  *****************************************************************************/
-#include <stdlib.h>
-#include "../../obj/y.tab.h"
+
 #include "../../src/Tools/tree.h"
+#define YYSTYPE tree*
+
+#include <stdlib.h>
+
+//make sure this is after tree import
+#include "../../obj/y.tab.h"
 
  //reference on the tree where commentary will be stocked
 comment* commentaire=NULL;
@@ -69,7 +74,7 @@ int yylex(void)
 		
 			if(commentaire!=NULL)
 			{
-			current->addComment(new comment(((tree*)yylval)->getNumLine(),((tree*)yylval)->getString()));
+			current->addComment(new comment(static_cast<tree*>(yylval)->getNumLine(),static_cast<tree*>(yylval)->getString()));
 			current=current->getNext();
 			}
 			else

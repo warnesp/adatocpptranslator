@@ -55,13 +55,13 @@ class discrim_spec: public typed,public named,public initialised
 	public:
 	char getBoolAccess(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	discrim_spec(void);
-	discrim_spec(char *p_Name,tree *p_TypeTree,char p_Access);
-	discrim_spec(char *p_Name,tree *p_TypeTree,char p_Access,tree *p_InitTree);
+	discrim_spec(const char *p_Name,tree *p_TypeTree,char p_Access);
+	discrim_spec(const char *p_Name,tree *p_TypeTree,char p_Access,tree *p_InitTree);
 	
 };
 
-discrim_spec* new_discrim_spec(char *p_Name,tree *p_TypeTree,tree *p_AccessTree,tree *p_InitTree);
+discrim_spec* new_discrim_spec(const char *p_Name,tree *p_TypeTree,tree *p_AccessTree,tree *p_InitTree);
 #endif

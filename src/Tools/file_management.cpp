@@ -47,12 +47,12 @@ void selectInput (FILE* p_File)
   yyin = p_File;
 }
 
-FILE* fileOpen(char *p_Name, char *p_OpenMode)
+FILE* fileOpen(const char *p_Name, const char *p_OpenMode)
 {
 	return fileOpen(p_Name,"./",p_OpenMode);
 }
 
-FILE* fileOpen(char *p_Name,char *p_Path, char *p_OpenMode)
+FILE* fileOpen(const char *p_Name,const char *p_Path, const char *p_OpenMode)
 {
 	FILE *fp=NULL;
 	
@@ -67,7 +67,7 @@ FILE* fileOpen(char *p_Name,char *p_Path, char *p_OpenMode)
 	return fp;
 }
 
-FILE* outputFileOpen(char *p_OutputPath,char *p_Name,char *p_Extension)
+FILE* outputFileOpen(const char *p_OutputPath,const char *p_Name,const char *p_Extension)
 {
 	FILE *fp=NULL;
 	

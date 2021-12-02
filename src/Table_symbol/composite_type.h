@@ -57,11 +57,11 @@ class composite_type:public type
 	public:
 	t_CompositeTypeId getCompositeTypeId(void);
 	
-	void checkIntegrity(char *p_FleName,int p_LineNumber);
+	void checkIntegrity(const char *p_FleName,int p_LineNumber);
 	
 	composite_type(void);
 	composite_type(t_CompositeTypeId p_CompositeTypeId);
-	composite_type(t_CompositeTypeId p_CompositeTypeId,char *p_Name,main_unit *p_MainUnit);
+	composite_type(t_CompositeTypeId p_CompositeTypeId,const char *p_Name,main_unit *p_MainUnit);
 };
 	
 #endif

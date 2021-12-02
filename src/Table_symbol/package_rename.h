@@ -51,9 +51,9 @@ class package_rename:public unit,public renamed
 	public:
 	char getBoolGeneric(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
-	package_rename(char *p_PackageName,char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit);
+	package_rename(const char *p_PackageName,const char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit);
 };
 
 #endif

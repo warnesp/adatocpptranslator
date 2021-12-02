@@ -65,11 +65,11 @@ class access_object_type: public access_type, public typed
 	
 	public:
 	t_AccessObjectTypeId getAccessObjectTypeId(void);
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	access_object_type(void);
-	access_object_type(t_AccessObjectTypeId p_AccessObjectTypeId,char *p_Name,tree *p_TypeTree,main_unit *p_MainUnit);
+	access_object_type(t_AccessObjectTypeId p_AccessObjectTypeId,const char *p_Name,tree *p_TypeTree,main_unit *p_MainUnit);
 };
 
-access_object_type* new_access_object_type(char *p_Name,tree *p_AccessTree,main_unit *p_MainUnit);
+access_object_type* new_access_object_type(const char *p_Name,tree *p_AccessTree,main_unit *p_MainUnit);
 #endif

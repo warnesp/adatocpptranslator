@@ -32,12 +32,12 @@
  *****************************************************************************/
 #include "renamed.h"
 
-char* renamed::getOriginalName(void)
+const char* renamed::getOriginalName(void)
 {
 	return m_OriginalName;
 }
 
-void renamed::checkIntegrity(char *p_FileName, int p_LineNumber)
+void renamed::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -71,7 +71,7 @@ renamed::renamed(void)
 	#endif
 }
 
-renamed::renamed(char *p_OriginalName)
+renamed::renamed(const char *p_OriginalName)
 {
 	#ifdef TRACE
 	printfTraceUp("renamed",__FILE__,__LINE__);

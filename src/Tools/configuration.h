@@ -73,18 +73,18 @@ class configuration
 {
 	private:
 	/* Software informations */
-	char *m_ReleaseName;
-	char *m_Release;
-	char *m_Date;
+	const char *m_ReleaseName;
+	const char *m_Release;
+	const char *m_Date;
 	
 	/* Extensions */
-	char *m_BodyExtension;
-	char *m_HeaderExtension;
-	char *m_LogExtension;
+	const char *m_BodyExtension;
+	const char *m_HeaderExtension;
+	const char *m_LogExtension;
 	
 	/* Directories */
-	char *m_InputDir;
-	char *m_OutputDir;
+	const char *m_InputDir;
+	const char *m_OutputDir;
 	
 	/* Verbose mode */
 	char m_Verbose;
@@ -92,16 +92,16 @@ class configuration
 	public:
 	configuration(void);
 	
-	char* getBodyExtension(void);
-	char* getHeaderExtension(void);
-	char* getLogExtension(void);
+	const char * getBodyExtension(void);
+	const char * getHeaderExtension(void);
+	const char * getLogExtension(void);
 	
-	char* getInputDir(void);
-	char* getOutputDir(void);
+	const char * getInputDir(void);
+	const char * getOutputDir(void);
 	
 	char getVerbose(void);
 	
 	void display(void);
-	void write(FILE *p_Fp,char *p_SourceName);
+	void write(FILE *p_Fp,const char *p_SourceName);
 };
 #endif

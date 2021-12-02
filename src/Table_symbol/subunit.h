@@ -41,14 +41,14 @@
 class subunit : public package
 {
 	protected :
-	char *m_ParentUnitName;
+	const char *m_ParentUnitName;
 	
 	public:
-	char *getParentUnitName(void);
+	const char *getParentUnitName(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	subunit(void);
-	subunit(char *p_Name,char *p_ParentUnitName,main_unit *p_MainUnit); 
+	subunit(const char *p_Name,const char *p_ParentUnitName,main_unit *p_MainUnit); 
 };
 #endif

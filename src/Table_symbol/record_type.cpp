@@ -55,7 +55,7 @@ component_list* record_type::getComponentList(void)
 	return m_ComponentList;
 }
 
-void record_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void record_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -100,7 +100,7 @@ record_type::record_type(void):composite_type(Composite_Type_Record),discrimined
 	#endif
 }
 
-record_type::record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,main_unit *p_MainUnit):composite_type(Composite_Type_Record,p_Name,p_MainUnit),discrimined()
+record_type::record_type(const char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,main_unit *p_MainUnit):composite_type(Composite_Type_Record,p_Name,p_MainUnit),discrimined()
 {
 	#ifdef TRACE
 	printfTraceUp("record_type",__FILE__,__LINE__);
@@ -115,7 +115,7 @@ record_type::record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagg
 	#endif
 }
 
-record_type::record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_MainUnit):composite_type(Composite_Type_Record,p_Name,p_MainUnit),discrimined(p_BoolGeneric,p_DiscrimSpecs)
+record_type::record_type(const char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_MainUnit):composite_type(Composite_Type_Record,p_Name,p_MainUnit),discrimined(p_BoolGeneric,p_DiscrimSpecs)
 {
 	#ifdef TRACE
 	printfTraceUp("record_type",__FILE__,__LINE__);
@@ -130,7 +130,7 @@ record_type::record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagg
 	#endif
 }
 
-record_type::record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,component_list *p_ComponentList,main_unit *p_MainUnit):composite_type(Composite_Type_Record,p_Name,p_MainUnit),discrimined()
+record_type::record_type(const char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,component_list *p_ComponentList,main_unit *p_MainUnit):composite_type(Composite_Type_Record,p_Name,p_MainUnit),discrimined()
 {
 	#ifdef TRACE
 	printfTraceUp("record_type",__FILE__,__LINE__);
@@ -145,7 +145,7 @@ record_type::record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagg
 	#endif
 }
 
-record_type::record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,component_list *p_ComponentList,main_unit *p_MainUnit):composite_type(Composite_Type_Record,p_Name,p_MainUnit),discrimined(p_BoolGeneric,p_DiscrimSpecs)
+record_type::record_type(const char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,component_list *p_ComponentList,main_unit *p_MainUnit):composite_type(Composite_Type_Record,p_Name,p_MainUnit),discrimined(p_BoolGeneric,p_DiscrimSpecs)
 {
 	#ifdef TRACE
 	printfTraceUp("record_type",__FILE__,__LINE__);
@@ -160,7 +160,7 @@ record_type::record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagg
 	#endif
 }
 
-record_type* new_record_type(char *p_Name,tree *p_DiscrimTree,tree *p_RecordTree,main_unit *p_MainUnit)
+record_type* new_record_type(const char *p_Name,tree *p_DiscrimTree,tree *p_RecordTree,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_record_type",__FILE__,__LINE__);

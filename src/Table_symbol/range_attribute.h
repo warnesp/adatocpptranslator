@@ -45,10 +45,10 @@ class range_attribute: public range, public named
 {
 	private:
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	range_attribute(void);
-	range_attribute(char *p_Name);
+	range_attribute(const char *p_Name);
 };
 
 #endif

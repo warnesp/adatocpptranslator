@@ -69,11 +69,11 @@ class access_subprog_type: public access_type
 	public:
 	t_AccessSubprogTypeId getAccessSubprogTypeId(void);
 	char getProtected(void);
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	access_subprog_type(void);
 	access_subprog_type(t_AccessSubprogTypeId p_AccessSubprogTypeId);
-	access_subprog_type(t_AccessSubprogTypeId p_AcccesSubprogTypeId,tree *p_ProtectedTree,char *p_Name,tree *p_FormalPart,tree *p_ReturnTypeTree,main_unit *p_MainUnit);
-	access_subprog_type(t_AccessSubprogTypeId p_AcccesSubprogTypeId,tree *p_ProtectedTree,char *p_Name,tree *p_FormalPart,main_unit *p_MainUnit);
+	access_subprog_type(t_AccessSubprogTypeId p_AcccesSubprogTypeId,tree *p_ProtectedTree,const char *p_Name,tree *p_FormalPart,tree *p_ReturnTypeTree,main_unit *p_MainUnit);
+	access_subprog_type(t_AccessSubprogTypeId p_AcccesSubprogTypeId,tree *p_ProtectedTree,const char *p_Name,tree *p_FormalPart,main_unit *p_MainUnit);
 };
 #endif

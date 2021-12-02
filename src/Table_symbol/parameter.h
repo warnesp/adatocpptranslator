@@ -65,13 +65,13 @@ class parameter : public variable_object
 	t_ParameterMode getParameterMode(void);
 	
 	void display(void);
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	parameter(void);
-	parameter(char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_ParameterMode,main_unit *p_MainUnit);
-	parameter(char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_ParameterMode,tree *p_InitTree,main_unit *p_MainUnit);
+	parameter(const char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_ParameterMode,main_unit *p_MainUnit);
+	parameter(const char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_ParameterMode,tree *p_InitTree,main_unit *p_MainUnit);
 
 };
 
-parameter* new_parameter(char *p_Name,tree *p_TypeTree,tree *p_ParameterModeTree,tree *p_InitTree, main_unit *p_MainUnit);
+parameter* new_parameter(const char *p_Name,tree *p_TypeTree,tree *p_ParameterModeTree,tree *p_InitTree, main_unit *p_MainUnit);
 #endif

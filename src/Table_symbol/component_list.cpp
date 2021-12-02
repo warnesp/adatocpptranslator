@@ -47,7 +47,7 @@ char component_list::getBoolVariantNull(void)
 	return m_BoolVariantNull;
 }
 
-char* component_list::getDiscrimName(void)
+const char* component_list::getDiscrimName(void)
 {
 	return m_DiscrimName;
 }
@@ -57,7 +57,7 @@ list<variant*>* component_list::getVariantPart(void)
 	return m_VariantPart;
 }
 
-void component_list::checkIntegrity(char *p_FileName, int p_LineNumber)
+void component_list::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -153,7 +153,7 @@ component_list::component_list(list<component*> *p_Components)
 	#endif
 }
 
-component_list::component_list(char *p_DiscrimName,list<variant*> *p_VariantPart)
+component_list::component_list(const char *p_DiscrimName,list<variant*> *p_VariantPart)
 {
 	#ifdef TRACE
 	printfTraceUp("component_list",__FILE__,__LINE__);
@@ -193,7 +193,7 @@ component_list::component_list(char *p_DiscrimName,list<variant*> *p_VariantPart
 	#endif
 }
 
-component_list::component_list(list<component*> *p_Components,char *p_DiscrimName,list<variant*> *p_VariantPart)
+component_list::component_list(list<component*> *p_Components,const char *p_DiscrimName,list<variant*> *p_VariantPart)
 {
 	#ifdef TRACE
 	printfTraceUp("component_list",__FILE__,__LINE__);
@@ -266,7 +266,7 @@ component_list* new_component_list(tree *p_Tree)
 						else
 						{
 							tree *p_VariantPart=p_Tree->getSon(1)->getSon(1);
-							char *p_DiscrimName=p_VariantPart->getSon(0)->getString();
+							const char *p_DiscrimName=p_VariantPart->getSon(0)->getString();
 							list<variant*> *p_Variants=NULL;
 							p_Variants=getListVariant(p_VariantPart->getSon(2),p_Variants);
 							result=new component_list(p_Components,p_DiscrimName,p_Variants);
@@ -275,7 +275,7 @@ component_list* new_component_list(tree *p_Tree)
 					else
 					{
 						tree *p_VariantPart=p_Tree->getSon(0);
-						char *p_DiscrimName=p_VariantPart->getSon(0)->getString();
+						const char *p_DiscrimName=p_VariantPart->getSon(0)->getString();
 						list<variant*> *p_Variants=NULL;
 						p_Variants=getListVariant(p_VariantPart->getSon(2),p_Variants);
 						result=new component_list(p_DiscrimName,p_Variants);	

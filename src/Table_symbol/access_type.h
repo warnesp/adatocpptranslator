@@ -57,11 +57,11 @@ class access_type: public elementary_type
 	
 	public:
 	t_AccessTypeId getAccessTypeId(void);
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	access_type(void);
 	access_type(t_AccessTypeId p_AccessTypeId);
-	access_type(t_AccessTypeId p_AcccesTypeId,char *p_Name,main_unit *p_MainUnit);
+	access_type(t_AccessTypeId p_AcccesTypeId,const char *p_Name,main_unit *p_MainUnit);
 };
 
 #endif

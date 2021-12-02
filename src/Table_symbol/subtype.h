@@ -46,10 +46,10 @@ class subtype:public type,public subtyped
 {
 	private:
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	subtype(void);
-	subtype(char *p_Name,subtyped *p_Subtype,main_unit *p_MainUnit);
+	subtype(const char *p_Name,subtyped *p_Subtype,main_unit *p_MainUnit);
 };
 
-subtype *new_subtype(char *p_Name,tree *p_SubtypeTree,main_unit *p_MainUnit);
+subtype *new_subtype(const char *p_Name,tree *p_SubtypeTree,main_unit *p_MainUnit);
 #endif

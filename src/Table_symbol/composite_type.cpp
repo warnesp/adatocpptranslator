@@ -45,7 +45,7 @@ void displayCompositeTypeId(t_CompositeTypeId p_CompositeTypeId)
 	}
 }
 
-void composite_type::checkIntegrity(char *p_FileName,int p_LineNumber)
+void composite_type::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -95,7 +95,7 @@ composite_type::composite_type(t_CompositeTypeId p_CompositeTypeId):type(Type_Co
 	#endif
 }
 
-composite_type::composite_type(t_CompositeTypeId p_CompositeTypeId,char *p_Name,main_unit *p_MainUnit):type(Type_Composite,p_Name,p_MainUnit)
+composite_type::composite_type(t_CompositeTypeId p_CompositeTypeId,const char *p_Name,main_unit *p_MainUnit):type(Type_Composite,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("composite_type",__FILE__,__LINE__);

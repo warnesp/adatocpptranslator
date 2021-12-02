@@ -45,11 +45,11 @@ class ordinary_fixed_type: public fixed_type
 {
 	private:
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	ordinary_fixed_type(void);
-	ordinary_fixed_type(char *p_Name,tree *p_Delta,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
+	ordinary_fixed_type(const char *p_Name,tree *p_Delta,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
 
 };
 
-ordinary_fixed_type* new_ordinary_fixed_type(char *p_Name,tree *p_Delta,tree *p_Range, main_unit *p_MainUnit);
+ordinary_fixed_type* new_ordinary_fixed_type(const char *p_Name,tree *p_Delta,tree *p_Range, main_unit *p_MainUnit);
 #endif

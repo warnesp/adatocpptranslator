@@ -41,6 +41,6 @@
 
 #include "../Tools/list.h"
 
-template<class T> list<T>* getByName(char *p_Name,list<T>* p_List);
+template<class T> list<T>* getByName(const char *p_Name,list<T>* p_List);
 
 #endif

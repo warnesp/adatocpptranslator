@@ -47,7 +47,7 @@
 
 extern configuration *g_Config;
 
-void generateCode(FILE *p_Fp,char p_BoolHeader,char *p_SourceName,char *p_NewName,tree *p_Tree);
+void generateCode(FILE *p_Fp,char p_BoolHeader,const char *p_SourceName,char *p_NewName,tree *p_Tree);
 void generateCode(FILE *p_Fp,tree *p_Tree);
 
 #endif

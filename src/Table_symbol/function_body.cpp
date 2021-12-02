@@ -43,7 +43,7 @@
 #include "function_body.h"
 #include "function_prototype.h"
 
-void function_body::checkIntegrity(char *p_FileName, int p_LineNumber)
+void function_body::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -75,7 +75,7 @@ list<parameter*>* function_body::getParameters(void)
 		#endif
 	}
 
-	function_body::function_body(char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,main_unit *p_MainUnit):main_unit(Main_Unit_Function_Body,p_Name,p_MainUnit)
+	function_body::function_body(const char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,main_unit *p_MainUnit):main_unit(Main_Unit_Function_Body,p_Name,p_MainUnit)
 	{
 		#ifdef TRACE
 		printfTraceUp("function_body",__FILE__,__LINE__);

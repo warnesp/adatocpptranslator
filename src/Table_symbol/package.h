@@ -60,26 +60,26 @@ class package: public main_unit
 	public:
 	t_Package_Type getPackageType(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	void display(void);
 	
 	package(void);
-	package(t_Package_Type p_PackageType,char *p_Name,main_unit *p_MainUnit);
+	package(t_Package_Type p_PackageType, const char *p_Name,main_unit *p_MainUnit);
 };
 
 class package_spec:public package
 {
 	public:
 	package_spec(void);
-	package_spec(char *p_Name,main_unit *p_MainUnit);
+	package_spec(const char *p_Name,main_unit *p_MainUnit);
 	
 };
 class package_body:public package
 {
 	public:
 	package_body(void);
-	package_body(char *p_Name,main_unit *p_MainUnit);
+	package_body(const char *p_Name,main_unit *p_MainUnit);
 	
 };
 #endif

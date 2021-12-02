@@ -45,13 +45,13 @@ class prot_type:public prot,public discrimined
 	protected :
 		
 	public:
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	prot_type(void);
-	prot_type(char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_CurrentMainUnit);
+	prot_type(const char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_CurrentMainUnit);
 	
 	
 };
 
-prot_type *new_prot_type(char *p_Name,tree *p_DiscrimSpecsTree,main_unit *p_CurrentMainUnit);
+prot_type *new_prot_type(const char *p_Name,tree *p_DiscrimSpecsTree,main_unit *p_CurrentMainUnit);
 #endif

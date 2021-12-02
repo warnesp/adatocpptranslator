@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "subtype.h"
 
-void subtype::checkIntegrity(char *p_FileName, int p_LineNumber)
+void subtype::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -62,7 +62,7 @@ subtype::subtype(void):type(Type_Subtype),subtyped()
 	
 }
 
-subtype::subtype(char *p_Name,subtyped *p_Subtyped,main_unit *p_MainUnit):type(Type_Subtype,p_Name,p_MainUnit),subtyped(p_Subtyped)
+subtype::subtype(const char *p_Name,subtyped *p_Subtyped,main_unit *p_MainUnit):type(Type_Subtype,p_Name,p_MainUnit),subtyped(p_Subtyped)
 {
 	#ifdef TRACE
 	printfTraceUp("subtype",__FILE__,__LINE__);
@@ -72,7 +72,7 @@ subtype::subtype(char *p_Name,subtyped *p_Subtyped,main_unit *p_MainUnit):type(T
 	#endif
 }
 
-subtype *new_subtype(char *p_Name,tree *p_SubtypeTree,main_unit *p_MainUnit)
+subtype *new_subtype(const char *p_Name,tree *p_SubtypeTree,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("subtype",__FILE__,__LINE__);

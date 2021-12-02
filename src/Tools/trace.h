@@ -40,7 +40,7 @@
 
 //	#define TRACE
 
-	void printfTraceUp(char *p_functionName,char *p_FileName,int p_lineNumber);
-	void printfTraceDown(char *p_functionName,char *p_FileName,int p_lineNumber);
+	void printfTraceUp(const char *p_functionName, const char *p_FileName,int p_lineNumber);
+	void printfTraceDown(const char *p_functionName, const char *p_FileName,int p_lineNumber);
 
 #endif

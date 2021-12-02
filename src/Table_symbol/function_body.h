@@ -53,10 +53,10 @@ class function_body:public main_unit
 	function_prototype *m_Prototype;
 
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	list<parameter*>* getParameters(void);
 
 	function_body(void);
-	function_body(char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,main_unit *p_MainUnit);
+	function_body(const char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,main_unit *p_MainUnit);
 };
 #endif

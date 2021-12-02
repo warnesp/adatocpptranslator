@@ -120,7 +120,7 @@ value::value(tree *p_Tree, double p_NumValue)
 /* $ Description :	methode wich checks the content of variable class to  */
 /* $	detect incoherences												  */
 /* $ ------------------------------------------------------------------------ */
-void value::checkIntegrity(char *p_FileName, int p_LineNumber)
+void value::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp( "checkIntegrity", __FILE__, __LINE__);

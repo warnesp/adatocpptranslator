@@ -48,9 +48,9 @@ class procedure_body:public main_unit
 	procedure_prototype *m_Prototype;
 
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	list<parameter*>* getParameters(void);
 	procedure_body(void);
-	procedure_body(char *p_Name,tree *p_FormalPartTree,main_unit *p_MainUnit);
+	procedure_body(const char *p_Name,tree *p_FormalPartTree,main_unit *p_MainUnit);
 };
 #endif

@@ -35,7 +35,7 @@
  *****************************************************************************/
 #include "generic_package_inst.h"
 
-char* generic_package_inst::getGenericPackageName(void)
+const char* generic_package_inst::getGenericPackageName(void)
 {
 	return m_GenericPackageName;
 }
@@ -47,7 +47,7 @@ void generic_package_inst::display(void)
 }
 
 
-void generic_package_inst::checkIntegrity(char *p_FileName,int p_LineNumber)
+void generic_package_inst::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -82,7 +82,7 @@ generic_package_inst::generic_package_inst(void)
 	
 }
 
-generic_package_inst::generic_package_inst(char *p_Name,char *p_GenericPackageName,main_unit *p_MainUnit):package(Generic_Package_Inst,p_Name,p_MainUnit)
+generic_package_inst::generic_package_inst(const char *p_Name,const char *p_GenericPackageName,main_unit *p_MainUnit):package(Generic_Package_Inst,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("generic_package_inst",__FILE__,__LINE__);
@@ -94,7 +94,7 @@ generic_package_inst::generic_package_inst(char *p_Name,char *p_GenericPackageNa
 	#endif
 }
 
-generic_package_inst* new_generic_package_inst(char *p_Name,tree *p_GenericPackageName,main_unit *p_MainUnit)
+generic_package_inst* new_generic_package_inst(const char *p_Name,tree *p_GenericPackageName,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_generic_package_inst",__FILE__,__LINE__);

@@ -46,9 +46,9 @@ class access_procedure_type: public access_subprog_type
 	private:
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	access_procedure_type(void);
-	access_procedure_type(char *p_Name,tree *p_ProtectedTree,tree *p_ParametersTree, main_unit *p_MainUnit);
+	access_procedure_type(const char *p_Name,tree *p_ProtectedTree,tree *p_ParametersTree, main_unit *p_MainUnit);
 };
 #endif

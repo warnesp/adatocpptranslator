@@ -396,7 +396,7 @@ int comment::getNumLine(void)
 	return m_NumLine;
 }
 
-char* comment::getCommentText(void)
+const char* comment::getCommentText(void)
 {
 	return m_CommentText;
 }
@@ -441,7 +441,7 @@ void comment::setNextToNull(void)
 	m_Next=NULL;
 }
 // check integrity
-void comment::checkIntegrity(char *p_FileName, int p_NumLine)
+void comment::checkIntegrity(const char *p_FileName, int p_NumLine)
 {
 	int error=0;
 	if(m_NumLine<0)
@@ -464,7 +464,7 @@ void comment::checkIntegrity(char *p_FileName, int p_NumLine)
 }
 
 //constructor
-comment::comment(int p_NumLine,char *p_CommentText)
+comment::comment(int p_NumLine,const char *p_CommentText)
 {
 	
 	m_NumLine=p_NumLine;
@@ -534,7 +534,7 @@ unit* tree::getTableSymbolMember(void)
 	return m_TableSymbolMember;
 }
 
-char* tree::getString(void)
+const char* tree::getString(void)
 {
 	return m_String;
 }
@@ -624,7 +624,7 @@ void tree::setFloat(float p_Float)
 	m_Float=p_Float;
 }
 
-void tree::setString(char *p_String)
+void tree::setString(const char *p_String)
 {
 	m_String=p_String;
 }
@@ -754,7 +754,7 @@ void tree::redistributeComments(void)
 }
 		
 // Check integrity
-void tree::checkIntegrity(char *p_FileName,int p_LineNumber)
+void tree::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	int error=0;
 	if(m_NumLine<0)
@@ -1022,7 +1022,7 @@ tree::tree(t_NodeType p_NodeType, tree *p_Son1, tree *p_Son2, tree *p_Son3, tree
 }
 
 // Special constructors
-tree::tree(t_NodeType p_NodeType, int p_NumLine, char *p_String)
+tree::tree(t_NodeType p_NodeType, int p_NumLine, const char *p_String)
 {
 	if(p_String==NULL)
 	{
@@ -1045,7 +1045,7 @@ tree::tree(t_NodeType p_NodeType, int p_NumLine, char *p_String)
 /****************************************
  * class treeInteger
  ****************************************/
-treeInteger::treeInteger(int p_NumLine, char * p_String):tree(Node_Ada_C_Integer,p_NumLine,p_String)
+treeInteger::treeInteger(int p_NumLine, const char * p_String):tree(Node_Ada_C_Integer,p_NumLine,p_String)
 {
 	if(p_String==NULL)
 	{
@@ -1059,7 +1059,7 @@ treeInteger::treeInteger(int p_NumLine, char * p_String):tree(Node_Ada_C_Integer
 /****************************************
  * class treeFloat
  ****************************************/
-treeFloat::treeFloat(int p_NumLine, char * p_String):tree(Node_Ada_C_Float,p_NumLine,p_String)
+treeFloat::treeFloat(int p_NumLine, const char * p_String):tree(Node_Ada_C_Float,p_NumLine,p_String)
 {
 	if(p_String==NULL)
 	{
@@ -1074,7 +1074,7 @@ treeFloat::treeFloat(int p_NumLine, char * p_String):tree(Node_Ada_C_Float,p_Num
 /****************************************
  * class treeBased
  ****************************************/
-treeBased::treeBased(int p_NumLine, char * p_String):tree(Node_Ada_C_Based_Number,p_NumLine,p_String)
+treeBased::treeBased(int p_NumLine, const char * p_String):tree(Node_Ada_C_Based_Number,p_NumLine,p_String)
 {
 	if(p_String==NULL)
 	{

@@ -44,7 +44,7 @@ class function_prototype:public typed, public procedure_prototype
 	private:
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	function_prototype(void);
 	function_prototype(tree *p_ReturnTree);

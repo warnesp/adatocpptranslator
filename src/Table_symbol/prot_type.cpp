@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "prot_type.h"
 
-void prot_type::checkIntegrity(char *p_FileName,int p_LineNumber)
+void prot_type::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	
 	#ifdef TRACE
@@ -56,7 +56,7 @@ prot_type::prot_type(void):prot(),discrimined()
 	#endif
 }
 
-prot_type::prot_type(char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_CurrentMainUnit):prot(Prot_Type,p_Name,p_CurrentMainUnit),discrimined(p_BoolGeneric,p_DiscrimSpecs)
+prot_type::prot_type(const char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_CurrentMainUnit):prot(Prot_Type,p_Name,p_CurrentMainUnit),discrimined(p_BoolGeneric,p_DiscrimSpecs)
 {
 	#ifdef TRACE
 	printfTraceUp("prot_type",__FILE__,__LINE__);
@@ -68,7 +68,7 @@ prot_type::prot_type(char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_Disc
 	
 }
 	
-prot_type *new_prot_type(char *p_Name,tree *p_DiscrimSpecsTree,main_unit *p_CurrentMainUnit)
+prot_type *new_prot_type(const char *p_Name,tree *p_DiscrimSpecsTree,main_unit *p_CurrentMainUnit)
 {
 	prot_type *result=NULL;
 	#ifdef TRACE

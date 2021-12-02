@@ -31,7 +31,7 @@
  *
  *****************************************************************************/
 #include "type.h"
-void errorNotManage(char *p_FileName,int p_LineNumber,t_TypeId p_TypeId)
+void errorNotManage(const char *p_FileName,int p_LineNumber,t_TypeId p_TypeId)
 {
 	printf("ERROR : %s %i : type id %i is not manage\n",p_FileName,p_LineNumber,p_TypeId);
 }
@@ -51,7 +51,7 @@ void displayTypeId(t_TypeId p_TypeId)
 	}
 }
 
-void type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -103,7 +103,7 @@ type::type(t_TypeId p_TypeId):unit()
 	#endif
 }
 
-type::type(t_TypeId p_TypeId,char *p_Name,main_unit *p_MainUnit):unit(p_Name,p_MainUnit)
+type::type(t_TypeId p_TypeId,const char *p_Name,main_unit *p_MainUnit):unit(p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("type",__FILE__,__LINE__);

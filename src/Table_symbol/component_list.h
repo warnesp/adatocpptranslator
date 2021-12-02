@@ -50,22 +50,22 @@ class component_list
 	char m_BoolComponentsNull;
 	list<component*> *m_Components;
 	char m_BoolVariantNull;
-	char *m_DiscrimName;
+	const char *m_DiscrimName;
 	list<variant*> *m_VariantPart;
 	
 	public:
 	char getBoolComponentsNull(void);
 	list<component*>* getComponents(void);
 	char getBoolVariantNull(void);
-	char* getDiscrimName(void);
+	const char* getDiscrimName(void);
 	list<variant*>* getVariantPart(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	component_list(void);
-	component_list::component_list(list<component*> *p_Components);
-	component_list(char *p_DiscrimName,list<variant*> *p_VariantPart);
-	component_list(list<component*> *p_Components,char *p_DiscrimName,list<variant*> *p_VariantPart);
+	component_list(list<component*> *p_Components);
+	component_list(const char *p_DiscrimName,list<variant*> *p_VariantPart);
+	component_list(list<component*> *p_Components,const char *p_DiscrimName,list<variant*> *p_VariantPart);
 	
 };
 

@@ -42,7 +42,7 @@ char discrim_spec::getBoolAccess(void)
 }
 
 
-void discrim_spec::checkIntegrity(char *p_FileName,int p_LineNumber)
+void discrim_spec::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	int error=0;
 	#ifdef TRACE
@@ -75,7 +75,7 @@ discrim_spec::discrim_spec(void):named(),typed(),initialised()
 	
 }
 	
-discrim_spec::discrim_spec(char *p_Name,tree *p_TypeTree,char p_Access):named(p_Name),typed(p_TypeTree),initialised()
+discrim_spec::discrim_spec(const char *p_Name,tree *p_TypeTree,char p_Access):named(p_Name),typed(p_TypeTree),initialised()
 {
 	#ifdef TRACE
 	printfTraceUp("discrim_spec",__FILE__,__LINE__);
@@ -90,7 +90,7 @@ discrim_spec::discrim_spec(char *p_Name,tree *p_TypeTree,char p_Access):named(p_
 	
 }
 
-discrim_spec::discrim_spec(char *p_Name,tree *p_TypeTree,char p_Access,tree *p_InitTree):named(p_Name),typed(p_TypeTree),initialised(p_InitTree)
+discrim_spec::discrim_spec(const char *p_Name,tree *p_TypeTree,char p_Access,tree *p_InitTree):named(p_Name),typed(p_TypeTree),initialised(p_InitTree)
 {
 	#ifdef TRACE
 	printfTraceUp("discrim_spec",__FILE__,__LINE__);
@@ -105,7 +105,7 @@ discrim_spec::discrim_spec(char *p_Name,tree *p_TypeTree,char p_Access,tree *p_I
 	
 }
 
-discrim_spec* new_discrim_spec(char *p_Name,tree *p_TypeTree,tree *p_AccessTree,tree *p_InitTree)
+discrim_spec* new_discrim_spec(const char *p_Name,tree *p_TypeTree,tree *p_AccessTree,tree *p_InitTree)
 {
 	#ifdef TRACE
 	printfTraceUp("new_discrim_spec",__FILE__,__LINE__);

@@ -48,9 +48,9 @@ class procedure_spec:public unit
 	procedure_prototype *m_Prototype;
 
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	procedure_spec(void);
-	procedure_spec(char *p_Name,tree *p_FormalPartTree,main_unit *p_MainUnit);
+	procedure_spec(const char *p_Name,tree *p_FormalPartTree,main_unit *p_MainUnit);
 };
 #endif

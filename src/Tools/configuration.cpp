@@ -62,27 +62,27 @@ configuration::configuration(void)
 	m_Verbose=VERBOSE;
 }
 
-char* configuration::getBodyExtension(void)
+const char * configuration::getBodyExtension(void)
 {
 	return m_BodyExtension;
 }
 
-char* configuration::getHeaderExtension(void)
+const char * configuration::getHeaderExtension(void)
 {
 	return m_HeaderExtension;
 }
 
-char* configuration::getLogExtension(void)
+const char * configuration::getLogExtension(void)
 {
 	return m_LogExtension;
 }
 
-char* configuration::getInputDir(void)
+const char * configuration::getInputDir(void)
 {
 	return m_InputDir;
 }
 
-char* configuration::getOutputDir(void)
+const char * configuration::getOutputDir(void)
 {
 	return m_OutputDir;
 }
@@ -99,7 +99,7 @@ void configuration::display(void)
 	printf("// Emission date : %s\n",m_Date);		
 }
 
-void configuration::write(FILE *p_Fp,char *p_SourceName)
+void configuration::write(FILE *p_Fp, const char *p_SourceName)
 {
 	if(p_Fp!=NULL)
 	{

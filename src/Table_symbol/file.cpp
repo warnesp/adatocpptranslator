@@ -47,7 +47,7 @@ void file::display(void)
 	printf("file : %s\n",this->getName());
 }
 
-void file::checkIntegrity(char *p_FileName,int p_LineNumber)
+void file::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -117,7 +117,7 @@ file::file():main_unit()
 	
 }
 
-file::file(char *p_Name,char *p_Path):main_unit(Main_Unit_File,p_Name,NULL)
+file::file(const char *p_Name,char *p_Path):main_unit(Main_Unit_File,p_Name,NULL)
 {
 	#ifdef TRACE
 	printfTraceUp("file",__FILE__,__LINE__);

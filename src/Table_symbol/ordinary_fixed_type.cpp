@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "ordinary_fixed_type.h"
 
-void ordinary_fixed_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void ordinary_fixed_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -53,7 +53,7 @@ ordinary_fixed_type::ordinary_fixed_type(void):fixed_type(Fixed_Type_Ordinary)
 	#endif
 }
 
-ordinary_fixed_type::ordinary_fixed_type(char *p_Name,tree *p_Delta,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit):fixed_type(Fixed_Type_Ordinary,p_Name,p_Delta,p_LowerBound,p_UpperBound,p_MainUnit)
+ordinary_fixed_type::ordinary_fixed_type(const char *p_Name,tree *p_Delta,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit):fixed_type(Fixed_Type_Ordinary,p_Name,p_Delta,p_LowerBound,p_UpperBound,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("ordinary_fixed_type",__FILE__,__LINE__);
@@ -64,7 +64,7 @@ ordinary_fixed_type::ordinary_fixed_type(char *p_Name,tree *p_Delta,tree *p_Lowe
 	#endif
 }
 
-ordinary_fixed_type *new_ordinary_fixed_type(char *p_Name,tree *p_Delta,tree *p_Range, main_unit *p_MainUnit)
+ordinary_fixed_type *new_ordinary_fixed_type(const char *p_Name,tree *p_Delta,tree *p_Range, main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_ordinary_fixed_type",__FILE__,__LINE__);

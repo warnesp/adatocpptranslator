@@ -52,7 +52,7 @@ class discrimined
 	char getBoolGeneric(void);
 	list<discrim_spec*>* getDiscrimSpecs(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	discrimined(void);
 	discrimined(char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs);

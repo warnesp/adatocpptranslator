@@ -60,14 +60,14 @@ class real_type: public scalar_type
 	
 	public:
 	t_RealTypeId getRealTypeId(void);
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	char getBoolRange(void);
 		
 	real_type(void);
 	real_type(t_RealTypeId p_RealTypeId);
-	real_type(t_RealTypeId p_RealTypeId,char *p_Name,tree *p_LowerBound,tree *p_UpperBound,main_unit *p_MainUnit);
-	real_type(t_RealTypeId p_RealTypeId,char *p_Name,main_unit *p_MainUnit);
+	real_type(t_RealTypeId p_RealTypeId,const char *p_Name,tree *p_LowerBound,tree *p_UpperBound,main_unit *p_MainUnit);
+	real_type(t_RealTypeId p_RealTypeId,const char *p_Name,main_unit *p_MainUnit);
 };
 
 #endif

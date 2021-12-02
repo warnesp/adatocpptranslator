@@ -46,7 +46,7 @@ tree* subtyped::getConstraint(void)
 	return m_Constraint;
 }
 
-void subtyped::checkIntegrity(char *p_FileName, int p_LineNumber)
+void subtyped::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

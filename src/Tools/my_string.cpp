@@ -37,7 +37,7 @@
  *****************************************************************************/
 #include "my_string.h"
 
-char* deleteExtension(char *p_Name)
+char* deleteExtension(const char *p_Name)
 {
 	/* Copy of file name */
 	char *l_Name=(char *)malloc((1+strlen(p_Name))*sizeof(char));
@@ -56,7 +56,7 @@ char* deleteExtension(char *p_Name)
 	return l_Name;
 }
 
-char* myStrcat(int p_Number,char *p_S1,...)
+char* myStrcat(int p_Number,const char *p_S1,...)
 {
 	char *result=NULL;
 	int length=strlen(p_S1);
@@ -84,7 +84,7 @@ char* myStrcat(int p_Number,char *p_S1,...)
 	return result;
 }
 
-char* myStrcpy(char *p_String)
+char* myStrcpy(const char *p_String)
 {
 	char *l_Result=NULL;
 	
@@ -103,7 +103,7 @@ char* myStrcpy(char *p_String)
 }
 
 
-char *myUpperCase(char *p_Name)
+char *myUpperCase(const char *p_Name)
 {
 	char *l_NewName=NULL;
 	
@@ -129,7 +129,7 @@ char *myUpperCase(char *p_Name)
 	return l_NewName;
 }
 
-char* removeChar(char *l_String,char l_Char)
+char* removeChar(const char *l_String,char l_Char)
 {
 	char *l_Result=NULL;
 	int l_NbChar=0;

@@ -46,7 +46,7 @@ void displayScalarTypeId(t_ScalarTypeId p_ScalarTypeId)
 	}
 }
 
-void scalar_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void scalar_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -100,7 +100,7 @@ scalar_type::scalar_type(t_ScalarTypeId p_ScalarTypeId):elementary_type(Elementa
 }
 
 
-scalar_type::scalar_type(t_ScalarTypeId p_ScalarTypeId,char *p_Name,main_unit *p_MainUnit):elementary_type(Elementary_Type_Scalar,p_Name,p_MainUnit)
+scalar_type::scalar_type(t_ScalarTypeId p_ScalarTypeId,const char *p_Name,main_unit *p_MainUnit):elementary_type(Elementary_Type_Scalar,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("scalar_type",__FILE__,__LINE__);

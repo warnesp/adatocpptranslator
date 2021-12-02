@@ -30,7 +30,7 @@
  *****************************************************************************/
 #include "function_prototype.h"
 
-void function_prototype::checkIntegrity(char *p_FileName, int p_LineNumber)
+void function_prototype::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

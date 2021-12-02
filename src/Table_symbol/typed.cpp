@@ -40,7 +40,7 @@
 
 #include "../Tools/tree_string_representation.h"
 
-char* typed::getTypeName(void)
+const char* typed::getTypeName(void)
 {
 	this->checkIntegrity(__FILE__,__LINE__);
 	return getString(m_TypeTree);
@@ -100,7 +100,7 @@ typed* typed::setTypeNotFound(void)
 
 }
 
-void typed::checkIntegrity(char *p_FileName,int p_LineNumber)
+void typed::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	int l_Error=0;
 	#ifdef TRACE

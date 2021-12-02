@@ -34,7 +34,7 @@
  *****************************************************************************/
 #include "command_argument.h"
 
-list<file*>* createListFile(char *p_Name)
+list<file*>* createListFile(const char *p_Name)
 {
 	FILE *fp=fileOpen(p_Name,"rt");
 	char name[FILE_NAME_MAX_SIZE]="\0";

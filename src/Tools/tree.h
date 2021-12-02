@@ -395,7 +395,7 @@ class comment
 	int m_NumLine;
 	
 	// text of comment
-	char *m_CommentText;
+	const char *m_CommentText;
 	
 	// reference on next comment
 	class comment *m_Next;
@@ -406,7 +406,7 @@ class comment
 	
 	// Access method to member fields
 	int getNumLine(void);
-	char *getCommentText(void);
+	const char *getCommentText(void);
 	comment* getNext(void);
 	
 	// method which return the reference on the last comment
@@ -418,10 +418,10 @@ class comment
 	void setNextToNull(void);
 	
 	// check integrity
-	void checkIntegrity(char *p_FileName, int p_NumLine);
+	void checkIntegrity(const char *p_FileName, int p_NumLine);
 	
 	//constructor
-	comment(int p_NumLine,char *p_CommentText);
+	comment(int p_NumLine,const char *p_CommentText);
 	
 	
 };
@@ -447,7 +447,7 @@ class tree
 	class tree **m_Sons;
 	
 	//string representation
-	char* m_String;
+	const char* m_String;
 	
 	//integer representation                                    
   	int m_Integer;
@@ -467,7 +467,7 @@ class tree
 	int getNbSon(void);
 	int getNumLine(void);
 	tree* getSon(int p_NumSon);
-	char* getString(void);
+	const char* getString(void);
 	int getInteger(void);
 	double getFloat(void);
 	comment* getComment(void);
@@ -484,7 +484,7 @@ class tree
 	void setInteger(int p_Integer);
 	void setFloat(float p_Float);
 	void setSon(int p_NumSon,tree *p_Tree);
-	void setString(char *p_String);
+	void setString(const char *p_String);
 	void setTableSymbolMember(unit *p_TableSymbolMember);
 	
 	
@@ -498,7 +498,7 @@ class tree
 	void redistributeComments(void);
 	
 	// Check integrity
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	//Display
 	void display(void);
@@ -515,7 +515,7 @@ class tree
 	tree(t_NodeType p_NodeType, tree *p_Son1, tree *p_Son2, tree *p_Son3, tree *p_Son4, tree *p_Son5, tree *p_Son6, int p_NumLine);
 	
 	// Special constructors
-	tree(t_NodeType p_NodeType, int p_NumLine, char * p_Ident);
+	tree(t_NodeType p_NodeType, int p_NumLine, const char * p_Ident);
 };
 
 /*****************************************************************************
@@ -526,7 +526,7 @@ class tree
 class treeInteger: public tree
 {
 	public:
-	treeInteger(int p_NumLine, char * p_String);
+	treeInteger(int p_NumLine, const char * p_String);
 };
 
 /*****************************************************************************
@@ -537,7 +537,7 @@ class treeInteger: public tree
 class treeFloat: public tree
 {
 	public:
-	treeFloat(int p_NumLine, char * p_String);
+	treeFloat(int p_NumLine, const char * p_String);
 };
 
 /*****************************************************************************
@@ -551,7 +551,7 @@ class treeBased: public tree
 	int m_Base;
 	
 	public:
-	treeBased(int p_NumLine, char * p_String);
+	treeBased(int p_NumLine, const char * p_String);
 
 	int getBase(void);
 };

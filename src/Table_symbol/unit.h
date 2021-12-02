@@ -55,10 +55,10 @@ class unit : public named
 	public:
 	main_unit* getMainUnit(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	unit(void);
-	unit(char *p_Name,main_unit *p_MainUnit);
+	unit(const char *p_Name,main_unit *p_MainUnit);
 };
 
 #endif

@@ -49,7 +49,7 @@ unit::unit(void):named()
 	
 }
 
-void unit::checkIntegrity(char *p_FileName,int p_LineNumber)
+void unit::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -73,7 +73,7 @@ void unit::checkIntegrity(char *p_FileName,int p_LineNumber)
 	
 }
 	
-unit::unit(char *p_Name,main_unit *p_MainUnit):named(p_Name)
+unit::unit(const char *p_Name,main_unit *p_MainUnit):named(p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("unit",__FILE__,__LINE__);

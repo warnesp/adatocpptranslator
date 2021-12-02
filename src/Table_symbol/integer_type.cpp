@@ -46,7 +46,7 @@ void displayIntegerTypeId(t_IntegerTypeId p_IntegerTypeId)
 	}
 }
 
-void integer_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void integer_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -100,7 +100,7 @@ integer_type::integer_type(t_IntegerTypeId p_IntegerTypeId):discrete_type(Discre
 }
 
 
-integer_type::integer_type(t_IntegerTypeId p_IntegerTypeId,char *p_Name,main_unit *p_MainUnit):discrete_type(Discrete_Type_Integer,p_Name,p_MainUnit)
+integer_type::integer_type(t_IntegerTypeId p_IntegerTypeId,const char *p_Name,main_unit *p_MainUnit):discrete_type(Discrete_Type_Integer,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("integer_type",__FILE__,__LINE__);

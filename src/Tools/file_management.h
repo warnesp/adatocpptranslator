@@ -40,7 +40,7 @@
 #define FILE_NAME_MAX_SIZE 300
 
 void selectInput (FILE* p_File);
-FILE* fileOpen(char *p_Name, char *p_OpenMode);
-FILE* fileOpen(char *p_Name, char *p_Path, char *p_OpenMode);
-FILE* outputFileOpen(char *p_OutputPath,char *p_Name,char *p_Extension);
+FILE* fileOpen(const char *p_Name, const char *p_OpenMode);
+FILE* fileOpen(const char *p_Name, const char *p_Path, const char *p_OpenMode);
+FILE* outputFileOpen(const char *p_OutputPath,const char *p_Name,const char *p_Extension);
 #endif

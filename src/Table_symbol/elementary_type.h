@@ -67,7 +67,7 @@ class elementary_type: public type
 	public:
 	t_ElementaryTypeId getElementaryTypeId(void);
 
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	elementary_type(void);
 	elementary_type(t_ElementaryTypeId p_ElementaryTypeId);
@@ -75,6 +75,6 @@ class elementary_type: public type
     /**
      * Constructeur vide
      * @param p_Name - nom de l'lementary_type*/
-	elementary_type(t_ElementaryTypeId p_ElementaryTypeId,char *p_Name,main_unit *p_MainUnit);
+	elementary_type(t_ElementaryTypeId p_ElementaryTypeId,const char *p_Name,main_unit *p_MainUnit);
 };
 #endif

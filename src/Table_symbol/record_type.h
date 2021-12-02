@@ -59,15 +59,15 @@ class record_type: public composite_type,public discrimined
 	char getBoolTagged(void);
 	component_list* getComponentList(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	record_type(void);
-	record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,main_unit *p_MainUnit);
-	record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_MainUnit);
-	record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,component_list *p_ComponentList,main_unit *p_MainUnit);
-	record_type(char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,component_list *p_ComponentList,main_unit *p_MainUnit);
+	record_type(const char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,main_unit *p_MainUnit);
+	record_type(const char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_MainUnit);
+	record_type(const char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,component_list *p_ComponentList,main_unit *p_MainUnit);
+	record_type(const char *p_Name,char p_Abstract,char p_Limited,char p_Tagged,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,component_list *p_ComponentList,main_unit *p_MainUnit);
 	
 };
 
-record_type* new_record_type(char *p_Name,tree *p_DiscrimTree,tree *p_RecordTree,main_unit *p_MainUnit);
+record_type* new_record_type(const char *p_Name,tree *p_DiscrimTree,tree *p_RecordTree,main_unit *p_MainUnit);
 #endif

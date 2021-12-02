@@ -59,12 +59,12 @@ class fixed_type: public real_type
 	t_FixedTypeId getFixedTypeId(void);
 	tree* getDelta(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	fixed_type(void);
 	fixed_type(t_FixedTypeId p_FixedTypeId);
-	fixed_type(t_FixedTypeId p_FixedTypeId,char *p_Name,tree *p_Delta,main_unit *p_MainUnit);
-	fixed_type(t_FixedTypeId p_FixedTypeId,char *p_Name,tree *p_Delta,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
+	fixed_type(t_FixedTypeId p_FixedTypeId,const char *p_Name,tree *p_Delta,main_unit *p_MainUnit);
+	fixed_type(t_FixedTypeId p_FixedTypeId,const char *p_Name,tree *p_Delta,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
 	
 };
 #endif

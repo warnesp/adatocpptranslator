@@ -56,11 +56,11 @@ class discrete_type: public scalar_type
 	
 	public:
 	t_DiscreteTypeId getDiscreteTypeId(void);
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	discrete_type(void);
 	discrete_type(t_DiscreteTypeId p_DiscreteTypeId);
-	discrete_type(t_DiscreteTypeId p_DiscreteTypeId,char *p_Name,main_unit *p_MainUnit);
+	discrete_type(t_DiscreteTypeId p_DiscreteTypeId,const char *p_Name,main_unit *p_MainUnit);
 };
 
 #endif

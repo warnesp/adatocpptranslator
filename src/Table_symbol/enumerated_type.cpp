@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "enumerated_type.h"
 
-void enumerated_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void enumerated_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -66,7 +66,7 @@ enumerated_type::enumerated_type(void):discrete_type(Discrete_Type_Enumerated)
 	
 }
 
-enumerated_type::enumerated_type(char *p_Name,list<named*> *p_EnumerationLitterals, main_unit *p_MainUnit):discrete_type(Discrete_Type_Enumerated,p_Name,p_MainUnit)
+enumerated_type::enumerated_type(const char *p_Name,list<named*> *p_EnumerationLitterals, main_unit *p_MainUnit):discrete_type(Discrete_Type_Enumerated,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("enumerated_type",__FILE__,__LINE__);
@@ -79,7 +79,7 @@ enumerated_type::enumerated_type(char *p_Name,list<named*> *p_EnumerationLittera
 	
 }
 
-enumerated_type* new_enumerated_type(char *p_Name,tree *p_EnumerationLitteralTree,main_unit *p_MainUnit)
+enumerated_type* new_enumerated_type(const char *p_Name,tree *p_EnumerationLitteralTree,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_enumerated_type",__FILE__,__LINE__);

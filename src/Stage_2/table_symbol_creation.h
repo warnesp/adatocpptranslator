@@ -87,17 +87,17 @@ extern file *g_CurrentFile;
  ************************/
 void tableSymboleCreation(tree *p_Tree);
 
-type* accessTypeDeclaration(tree *p_Tree,char *p_Name);
-type* arrayTypeDeclaration(tree *p_Tree,char *p_Name);
+type* accessTypeDeclaration(tree *p_Tree,const char *p_Name);
+type* arrayTypeDeclaration(tree *p_Tree,const char *p_Name);
 void clauseUseTreatement(tree *p_Tree);
 void clauseWithTreatement(tree *p_Tree);
-type* fixedTypeDeclaration(tree *p_Tree,char *p_Name);
+type* fixedTypeDeclaration(tree *p_Tree,const char *p_Name);
 void functionSpecDeclaration(tree *p_Tree);
 void genericDeclarationManagement(tree *p_Tree);
 void genericPackageDeclaration(tree *p_Tree);
 void genericSubprogDeclaration(tree *p_Tree);
 void genericPackageInstantiation(tree *p_Tree);
-type* integerTypeDeclaration(tree *p_Tree,char *p_Name);
+type* integerTypeDeclaration(tree *p_Tree,const char *p_Name);
 void numberDeclaration(tree *p_Tree,tree *p_TreeInit);
 void objectDeclaration(tree *p_IdentifierTree,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDef, tree *p_InitTree);
 void packageBodyDeclaration(tree *p_Tree);

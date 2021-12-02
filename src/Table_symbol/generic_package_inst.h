@@ -42,18 +42,18 @@
 class generic_package_inst : public package
 {
 	private:
-	char *m_GenericPackageName;
+	const char *m_GenericPackageName;
 	
 	public:
-	char* getGenericPackageName(void);
+	const char* getGenericPackageName(void);
 	
 	void display(void);
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	generic_package_inst(void);
-	generic_package_inst(char *p_Name,char *p_GenericPackageName,main_unit *p_MainUnit);
+	generic_package_inst(const char *p_Name,const char *p_GenericPackageName,main_unit *p_MainUnit);
 	
 };
 
-generic_package_inst* new_generic_package_inst(char *p_Name,tree *p_GenericPackageName,main_unit *p_MainUnit);
+generic_package_inst* new_generic_package_inst(const char *p_Name,tree *p_GenericPackageName,main_unit *p_MainUnit);
 #endif

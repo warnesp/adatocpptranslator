@@ -56,7 +56,7 @@ class typed
 	char m_BoolFound;
 
 	public:
-	char* getTypeName(void);
+	const char* getTypeName(void);
 	tree* getTypeTree(void);
 	type* getType(void);
 	
@@ -67,7 +67,7 @@ class typed
 	typed* setTypeNotFound(void);
 
 
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	typed(void);
 	typed(tree *p_Tree);

@@ -44,15 +44,15 @@
 class renamed
 {
 	private:
-	char *m_OriginalName;
+	const char *m_OriginalName;
 	
 	public:
-	char* getOriginalName(void);
+	const char* getOriginalName(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	renamed(void);
-	renamed(char *p_OriginalName);
+	renamed(const char *p_OriginalName);
 	
 };
 #endif

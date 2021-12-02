@@ -50,7 +50,7 @@ class file : public main_unit
 	public:
 	
 	void display(void);
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	char* getPath(void);
 	tree* getTree(void);
@@ -60,7 +60,7 @@ class file : public main_unit
 	void setBoolHeader(char p_BoolHeader);
 	
 	file();
-	file(char *p_Name,char *p_Path);
+	file(const char *p_Name,char *p_Path);
 	
 };
 

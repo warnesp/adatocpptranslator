@@ -50,7 +50,7 @@ void displayRealTypeId(t_RealTypeId p_RealTypeId)
 	}
 }
 
-void real_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void real_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -130,7 +130,7 @@ real_type::real_type(t_RealTypeId p_RealTypeId):scalar_type(Scalar_Type_Real)
 	#endif
 }
 
-real_type::real_type(t_RealTypeId p_RealTypeId,char *p_Name,main_unit *p_MainUnit):scalar_type(Scalar_Type_Real,p_Name,p_MainUnit)
+real_type::real_type(t_RealTypeId p_RealTypeId,const char *p_Name,main_unit *p_MainUnit):scalar_type(Scalar_Type_Real,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("real_type",__FILE__,__LINE__);
@@ -145,7 +145,7 @@ real_type::real_type(t_RealTypeId p_RealTypeId,char *p_Name,main_unit *p_MainUni
 	
 }
 
-real_type::real_type(t_RealTypeId p_RealTypeId,char *p_Name,tree *p_LowerBound,tree *p_UpperBound,main_unit *p_MainUnit):scalar_type(Scalar_Type_Real,p_Name,p_MainUnit)
+real_type::real_type(t_RealTypeId p_RealTypeId,const char *p_Name,tree *p_LowerBound,tree *p_UpperBound,main_unit *p_MainUnit):scalar_type(Scalar_Type_Real,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("real_type",__FILE__,__LINE__);

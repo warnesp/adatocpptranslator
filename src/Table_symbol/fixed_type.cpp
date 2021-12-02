@@ -55,7 +55,7 @@ tree* fixed_type::getDelta(void)
 	return m_Delta;
 }
 
-void fixed_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void fixed_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -111,7 +111,7 @@ fixed_type::fixed_type(t_FixedTypeId p_FixedTypeId):real_type(Real_Type_Fixed)
 	#endif
 }
 
-fixed_type::fixed_type(t_FixedTypeId p_FixedTypeId,char *p_Name,tree *p_Delta,main_unit *p_MainUnit):real_type(Real_Type_Fixed,p_Name,p_MainUnit)
+fixed_type::fixed_type(t_FixedTypeId p_FixedTypeId,const char *p_Name,tree *p_Delta,main_unit *p_MainUnit):real_type(Real_Type_Fixed,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("fixed_type",__FILE__,__LINE__);
@@ -124,7 +124,7 @@ fixed_type::fixed_type(t_FixedTypeId p_FixedTypeId,char *p_Name,tree *p_Delta,ma
 	#endif
 }
 
-fixed_type::fixed_type(t_FixedTypeId p_FixedTypeId,char *p_Name,tree *p_Delta,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit):real_type(Real_Type_Fixed,p_Name,p_LowerBound,p_UpperBound,p_MainUnit)
+fixed_type::fixed_type(t_FixedTypeId p_FixedTypeId,const char *p_Name,tree *p_Delta,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit):real_type(Real_Type_Fixed,p_Name,p_LowerBound,p_UpperBound,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("fixed_type",__FILE__,__LINE__);

@@ -49,7 +49,7 @@ void displayRangeId(t_RangeId p_RangeId)
 	}
 }
 
-void range::checkIntegrity(char *p_FileName,int p_LineNumber)
+void range::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

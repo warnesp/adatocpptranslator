@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "decimal_fixed_type.h"
 
-void decimal_fixed_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void decimal_fixed_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -68,7 +68,7 @@ decimal_fixed_type::decimal_fixed_type(void):fixed_type(Fixed_Type_Decimal)
 	#endif
 }
 
-decimal_fixed_type::decimal_fixed_type(char *p_Name,tree *p_Delta,tree *p_Digit, main_unit *p_MainUnit):fixed_type(Fixed_Type_Ordinary,p_Name,p_Delta,p_MainUnit)
+decimal_fixed_type::decimal_fixed_type(const char *p_Name,tree *p_Delta,tree *p_Digit, main_unit *p_MainUnit):fixed_type(Fixed_Type_Ordinary,p_Name,p_Delta,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("decimal_fixed_type",__FILE__,__LINE__);
@@ -80,7 +80,7 @@ decimal_fixed_type::decimal_fixed_type(char *p_Name,tree *p_Delta,tree *p_Digit,
 	#endif
 }
 
-decimal_fixed_type::decimal_fixed_type(char *p_Name,tree *p_Delta,tree *p_Digit, tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit):fixed_type(Fixed_Type_Ordinary,p_Name,p_Delta,p_LowerBound,p_UpperBound,p_MainUnit)
+decimal_fixed_type::decimal_fixed_type(const char *p_Name,tree *p_Delta,tree *p_Digit, tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit):fixed_type(Fixed_Type_Ordinary,p_Name,p_Delta,p_LowerBound,p_UpperBound,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("decimal_fixed_type",__FILE__,__LINE__);
@@ -92,7 +92,7 @@ decimal_fixed_type::decimal_fixed_type(char *p_Name,tree *p_Delta,tree *p_Digit,
 	#endif
 }
 
-decimal_fixed_type *new_decimal_fixed_type(char *p_Name,tree *p_Delta,tree *p_Digit,tree *p_Range, main_unit *p_MainUnit)
+decimal_fixed_type *new_decimal_fixed_type(const char *p_Name,tree *p_Delta,tree *p_Digit,tree *p_Range, main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_decimal_fixed_type",__FILE__,__LINE__);

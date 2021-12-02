@@ -40,7 +40,7 @@ char procedure_rename::getBoolGeneric(void)
 	return m_BoolGeneric;
 }
 	
-void procedure_rename::checkIntegrity(char *p_FileName,int p_LineNumber)
+void procedure_rename::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -53,7 +53,7 @@ void procedure_rename::checkIntegrity(char *p_FileName,int p_LineNumber)
 	
 }
 
-procedure_rename::procedure_rename(char *p_Name,tree *p_FormalPartTree,char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit):procedure_spec(p_Name,p_FormalPartTree,p_MainUnit),renamed(p_OriginalName)
+procedure_rename::procedure_rename(const char *p_Name,tree *p_FormalPartTree,const char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit):procedure_spec(p_Name,p_FormalPartTree,p_MainUnit),renamed(p_OriginalName)
 {
 	#ifdef TRACE
 	printfTraceUp("procedure_rename",__FILE__,__LINE__);

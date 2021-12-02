@@ -43,7 +43,7 @@ char function_rename::getBoolGeneric(void)
 	return m_BoolGeneric;
 }
 	
-void function_rename::checkIntegrity(char *p_FileName,int p_LineNumber)
+void function_rename::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -56,7 +56,7 @@ void function_rename::checkIntegrity(char *p_FileName,int p_LineNumber)
 	
 }
 
-function_rename::function_rename(char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit):function_spec(p_Name,p_FormalPartTree,p_ReturnTypeTree,p_MainUnit),renamed(p_OriginalName)
+function_rename::function_rename(const char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,const char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit):function_spec(p_Name,p_FormalPartTree,p_ReturnTypeTree,p_MainUnit),renamed(p_OriginalName)
 {
 	#ifdef TRACE
 	printfTraceUp("function_rename",__FILE__,__LINE__);

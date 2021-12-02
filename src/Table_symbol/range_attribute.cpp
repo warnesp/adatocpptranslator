@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "range_attribute.h"
 
-void range_attribute::checkIntegrity(char *p_FileName,int p_LineNumber)
+void range_attribute::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -54,7 +54,7 @@ range_attribute::range_attribute(void):range(Range_Attribute),named()
 	#endif
 }
 
-range_attribute::range_attribute(char *p_Name):range(Range_Attribute),named(p_Name)
+range_attribute::range_attribute(const char *p_Name):range(Range_Attribute),named(p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("range_attribute",__FILE__,__LINE__);

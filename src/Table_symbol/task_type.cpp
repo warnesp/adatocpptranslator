@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "task_type.h"
 
-void task_type::checkIntegrity(char *p_FileName,int p_LineNumber)
+void task_type::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	
 	#ifdef TRACE
@@ -56,7 +56,7 @@ task_type::task_type(void):task(),discrimined()
 	#endif
 }
 
-task_type::task_type(char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_CurrentMainUnit):task(Task_Type,p_Name,p_CurrentMainUnit),discrimined(p_BoolGeneric,p_DiscrimSpecs)
+task_type::task_type(const char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_CurrentMainUnit):task(Task_Type,p_Name,p_CurrentMainUnit),discrimined(p_BoolGeneric,p_DiscrimSpecs)
 {
 	#ifdef TRACE
 	printfTraceUp("task_type",__FILE__,__LINE__);
@@ -68,7 +68,7 @@ task_type::task_type(char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_Disc
 	
 }
 	
-task_type *new_task_type(char *p_Name,tree *p_DiscrimSpecsTree,main_unit *p_CurrentMainUnit)
+task_type *new_task_type(const char *p_Name,tree *p_DiscrimSpecsTree,main_unit *p_CurrentMainUnit)
 {
 	task_type *result=NULL;
 	#ifdef TRACE

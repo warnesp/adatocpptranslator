@@ -51,7 +51,7 @@ t_ProtType prot::getProtType(void)
 	return  m_ProtType;
 }
 
-void prot::checkIntegrity(char *p_FileName, int p_LineNumber)
+void prot::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -86,7 +86,7 @@ prot::prot(void):main_unit()
 	
 }
 
-prot::prot(t_ProtType p_ProtType,char *p_Name,main_unit *p_CurrentMainUnit):main_unit(Main_Unit_Prot,p_Name,p_CurrentMainUnit)
+prot::prot(t_ProtType p_ProtType,const char *p_Name,main_unit *p_CurrentMainUnit):main_unit(Main_Unit_Prot,p_Name,p_CurrentMainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("prot",__FILE__,__LINE__);

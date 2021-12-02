@@ -47,11 +47,11 @@ class enumerated_type: public discrete_type
 	list<named*> *m_EnumerationLitterals;
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	enumerated_type(void);
-	enumerated_type(char *p_Name,list<named*> *p_EnumerationLitterals,main_unit *p_MainUnit);
+	enumerated_type(const  char *p_Name,list<named*> *p_EnumerationLitterals,main_unit *p_MainUnit);
 };
 
-enumerated_type* new_enumerated_type(char *p_Name,tree *p_EnumerationLitteralTree,main_unit *p_MainUnit);
+enumerated_type* new_enumerated_type(const char *p_Name,tree *p_EnumerationLitteralTree,main_unit *p_MainUnit);
 #endif

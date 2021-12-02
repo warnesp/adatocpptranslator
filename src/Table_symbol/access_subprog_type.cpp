@@ -53,7 +53,7 @@ void displayAccessSubprogTypeId(t_AccessSubprogTypeId p_AccessSubprogTypeId)
 	}
 }
 
-void access_subprog_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void access_subprog_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -121,7 +121,7 @@ access_subprog_type::access_subprog_type(t_AccessSubprogTypeId p_AccessSubprogTy
 }
 
 
-access_subprog_type::access_subprog_type(t_AccessSubprogTypeId p_AccessSubprogTypeId,tree *p_ProtectedTree,char *p_Name,tree *p_FormalPartTree, tree *p_ReturnTypeTree, main_unit *p_MainUnit):access_type(Access_Type_Subprog,p_Name,p_MainUnit)
+access_subprog_type::access_subprog_type(t_AccessSubprogTypeId p_AccessSubprogTypeId,tree *p_ProtectedTree,const char *p_Name,tree *p_FormalPartTree, tree *p_ReturnTypeTree, main_unit *p_MainUnit):access_type(Access_Type_Subprog,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("access_subprog_type",__FILE__,__LINE__);
@@ -166,7 +166,7 @@ access_subprog_type::access_subprog_type(t_AccessSubprogTypeId p_AccessSubprogTy
 	
 }
 
-access_subprog_type::access_subprog_type(t_AccessSubprogTypeId p_AccessSubprogTypeId,tree *p_ProtectedTree,char *p_Name,tree *p_FormalPartTree, main_unit *p_MainUnit):access_type(Access_Type_Subprog,p_Name,p_MainUnit)
+access_subprog_type::access_subprog_type(t_AccessSubprogTypeId p_AccessSubprogTypeId,tree *p_ProtectedTree,const char *p_Name,tree *p_FormalPartTree, main_unit *p_MainUnit):access_type(Access_Type_Subprog,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("access_subprog_type",__FILE__,__LINE__);

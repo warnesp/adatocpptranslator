@@ -62,7 +62,7 @@ t_TaskType task::getTaskType(void)
 }
 	
 	
-void task::checkIntegrity(char *p_FileName,int p_LineNumber)
+void task::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	int error=0;
 	#ifdef TRACE
@@ -97,7 +97,7 @@ task::task(void):main_unit()
 	
 }
 
-task::task(t_TaskType p_TaskType,char *p_Name,main_unit *p_CurrentMainUnit):main_unit(Main_Unit_Task,p_Name,p_CurrentMainUnit)
+task::task(t_TaskType p_TaskType,const char *p_Name,main_unit *p_CurrentMainUnit):main_unit(Main_Unit_Task,p_Name,p_CurrentMainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("task",__FILE__,__LINE__);

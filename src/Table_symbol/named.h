@@ -44,16 +44,16 @@
 class named
 {
 	private:
-	char *m_Name;
+	const char *m_Name;
 	
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
-	char* getName(void);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
+	const char* getName(void);
 	
 	void display(void);
 	
 	named(void);
-	named(char *p_Name);
+	named(const char *p_Name);
 };
 #endif

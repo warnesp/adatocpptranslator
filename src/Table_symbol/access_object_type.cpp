@@ -50,7 +50,7 @@ t_AccessObjectTypeId access_object_type::getAccessObjectTypeId(void)
 	return m_AccessObjectTypeId;
 }
 
-void access_object_type::checkIntegrity(char *p_FileName,int p_LineNumber)
+void access_object_type::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("access_object_type",__FILE__,__LINE__);
@@ -88,7 +88,7 @@ access_object_type::access_object_type(void):access_type(Access_Type_Object),typ
 	#endif
 }
 
-access_object_type::access_object_type(t_AccessObjectTypeId p_AccessObjectTypeId,char *p_Name,tree *p_TypeTree,main_unit *p_MainUnit):access_type(Access_Type_Object,p_Name,p_MainUnit),typed(p_TypeTree)
+access_object_type::access_object_type(t_AccessObjectTypeId p_AccessObjectTypeId,const char *p_Name,tree *p_TypeTree,main_unit *p_MainUnit):access_type(Access_Type_Object,p_Name,p_MainUnit),typed(p_TypeTree)
 {
 	#ifdef TRACE
 	printfTraceUp("access_object_type",__FILE__,__LINE__);
@@ -99,7 +99,7 @@ access_object_type::access_object_type(t_AccessObjectTypeId p_AccessObjectTypeId
 	#endif
 }
 
-access_object_type* new_access_object_type(char *p_Name,tree *p_AccessTree,main_unit *p_MainUnit)
+access_object_type* new_access_object_type(const char *p_Name,tree *p_AccessTree,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_access_object_type",__FILE__,__LINE__);

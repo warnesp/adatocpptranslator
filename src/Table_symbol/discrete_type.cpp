@@ -46,7 +46,7 @@ void displayDiscreteTypeId(t_DiscreteTypeId p_DiscreteTypeId)
 	}
 }
 
-void discrete_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void discrete_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -100,7 +100,7 @@ discrete_type::discrete_type(t_DiscreteTypeId p_DiscreteTypeId):scalar_type(Scal
 }
 
 
-discrete_type::discrete_type(t_DiscreteTypeId p_DiscreteTypeId,char *p_Name,main_unit *p_MainUnit):scalar_type(Scalar_Type_Discrete,p_Name,p_MainUnit)
+discrete_type::discrete_type(t_DiscreteTypeId p_DiscreteTypeId,const char *p_Name,main_unit *p_MainUnit):scalar_type(Scalar_Type_Discrete,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("discrete_type",__FILE__,__LINE__);

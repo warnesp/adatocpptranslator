@@ -48,10 +48,10 @@ class modular_integer_type: public integer_type
 	tree *m_Modulo;
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	modular_integer_type(void);
-	modular_integer_type(char *p_Name,tree *p_Modulo, main_unit *p_MainUnit);
+	modular_integer_type(const char *p_Name,tree *p_Modulo, main_unit *p_MainUnit);
 	
 };
 #endif

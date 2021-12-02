@@ -52,7 +52,7 @@ void displayPackageType(t_Package_Type p_PackageType)
 
 
 
-void package::checkIntegrity(char *p_FileName,int p_LineNumber)
+void package::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -98,7 +98,7 @@ package::package(void):main_unit()
 	
 }
 	
-package::package(t_Package_Type p_PackageType,char *p_Name,main_unit *p_MainUnit):main_unit(Main_Unit_Package,p_Name,p_MainUnit)
+package::package(t_Package_Type p_PackageType,const char *p_Name,main_unit *p_MainUnit):main_unit(Main_Unit_Package,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("package",__FILE__,__LINE__);
@@ -121,7 +121,7 @@ package_spec::package_spec(void):package()
 	#endif
 }
 	
-package_spec::package_spec(char *p_Name,main_unit *p_MainUnit):package(Spec,p_Name,p_MainUnit)
+package_spec::package_spec(const char *p_Name,main_unit *p_MainUnit):package(Spec,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("package_spec",__FILE__,__LINE__);
@@ -141,7 +141,7 @@ package_body::package_body(void):package()
 	#endif
 }
 	
-package_body::package_body(char *p_Name,main_unit *p_MainUnit):package(Body,p_Name,p_MainUnit)
+package_body::package_body(const char *p_Name,main_unit *p_MainUnit):package(Body,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("package_body",__FILE__,__LINE__);

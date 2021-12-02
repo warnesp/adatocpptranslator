@@ -71,7 +71,7 @@ main_unit *g_CurrentMainUnit=NULL;
 
 extern configuration *g_Config;
 
-void printfDeclarationOf(char *p_Declarated,char *p_Name,char *p_FileName,int p_NumLigne)
+void printfDeclarationOf(const char *p_Declarated,const char *p_Name,const char *p_FileName,int p_NumLigne)
 {
 	if(g_Config->getVerbose()>0)
 	{
@@ -248,7 +248,7 @@ void tableSymboleCreation(tree *p_Tree)
 	}
 }
 
-type* accessTypeDeclaration(tree *p_Tree,char *p_Name)
+type* accessTypeDeclaration(tree *p_Tree,const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("accessTypeDeclaration",__FILE__,__LINE__);
@@ -313,7 +313,7 @@ type* accessTypeDeclaration(tree *p_Tree,char *p_Name)
 	return result;
 }
 
-type* arrayTypeDeclaration(tree *p_Tree,char *p_Name)
+type* arrayTypeDeclaration(tree *p_Tree,const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("arrayTypeDeclaration",__FILE__,__LINE__);
@@ -411,7 +411,7 @@ void clauseWithTreatement(tree *p_Tree)
 	#endif
 }
 
-type* fixedTypeDeclaration(tree *p_Tree,char *p_Name)
+type* fixedTypeDeclaration(tree *p_Tree,const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("fixedTypeDeclaration",__FILE__,__LINE__);
@@ -609,7 +609,7 @@ void genericPackageInstantiation(tree *p_Tree)
 	
 }
 
-type* integerTypeDeclaration(tree *p_Tree,char *p_Name)
+type* integerTypeDeclaration(tree *p_Tree,const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("integerTypeDeclaration",__FILE__,__LINE__);

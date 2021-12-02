@@ -45,7 +45,7 @@ class object: public initialised
 	public:
 	char getBoolAliased(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	//constructor
 	object(void);

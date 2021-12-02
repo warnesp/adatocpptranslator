@@ -45,9 +45,9 @@
 
 #include "error.h"
 
-char *deleteExtension(char *p_Name);
-char* myStrcat(int p_Number,char *p_S1,...);
-char* myStrcpy(char *p_String);
-char *myUpperCase(char *p_name);
-char* removeChar(char *l_String,char l_Char);
+char *deleteExtension(const char *p_Name);
+char* myStrcat(int p_Number, const char *p_S1,...);
+char* myStrcpy(const char *p_String);
+char *myUpperCase(const char *p_name);
+char* removeChar(const char *l_String,char l_Char);
 #endif

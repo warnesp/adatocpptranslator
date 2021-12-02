@@ -43,7 +43,7 @@ void displayArrayId(t_ArrayId p_ArrayId)
 	}
 }
 
-void array::checkIntegrity(char *p_FileName, int p_LineNumber)
+void array::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

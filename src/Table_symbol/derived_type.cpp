@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "derived_type.h"
 
-void derived_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void derived_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -56,7 +56,7 @@ derived_type::derived_type(void):type(Type_Derived),subtyped()
 	#endif
 }
 
-derived_type::derived_type(char *p_Name,subtyped *p_Subtype,main_unit *p_MainUnit):type(Type_Derived,p_Name,p_MainUnit),subtyped(p_Subtype)
+derived_type::derived_type(const char *p_Name,subtyped *p_Subtype,main_unit *p_MainUnit):type(Type_Derived,p_Name,p_MainUnit),subtyped(p_Subtype)
 {
 	#ifdef TRACE
 	printfTraceUp("derived_type",__FILE__,__LINE__);
@@ -66,7 +66,7 @@ derived_type::derived_type(char *p_Name,subtyped *p_Subtype,main_unit *p_MainUni
 	#endif
 }
 
-derived_type *new_derived_type(char *p_Name,tree *p_SubtypeTree,main_unit *p_MainUnit)
+derived_type *new_derived_type(const char *p_Name,tree *p_SubtypeTree,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("derived_type",__FILE__,__LINE__);

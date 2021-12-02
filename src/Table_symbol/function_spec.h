@@ -56,10 +56,10 @@ class function_spec:public unit
 	function_prototype *m_Prototype;
 
 	public:
-	char* getTypeName(void);
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	const char* getTypeName(void);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	function_spec(void);
-	function_spec(char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypTree,main_unit *p_MainUnit);
+	function_spec(const char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypTree,main_unit *p_MainUnit);
 };
 #endif

@@ -38,7 +38,7 @@ char object::getBoolAliased(void)
 	return m_BoolAliased;
 }
 
-void object::checkIntegrity(char *p_FileName,int p_LineNumber)
+void object::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

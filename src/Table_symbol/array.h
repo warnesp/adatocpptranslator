@@ -60,7 +60,7 @@ class array:public subtyped
 	int m_NbDim;
 	
 	public:
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	t_ArrayId getArrayId(void);
 	list<tree*>* getDims(void);
 	int getNbDim(void);

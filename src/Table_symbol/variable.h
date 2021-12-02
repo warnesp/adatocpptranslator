@@ -61,11 +61,11 @@ class variable:public unit, public object
 	t_VariableId getVariableId(void);
 	char getBoolConstant(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	variable(void);
 	variable(t_VariableId p_VariableId);
-	variable(t_VariableId p_VariableId,char *p_Name,char p_Constant,char p_Aliased,main_unit *p_MainUnit);
-	variable(t_VariableId p_VariableId,char *p_Name,char p_Constant,char p_Aliased,tree *p_InitTree,main_unit *p_MainUnit);
+	variable(t_VariableId p_VariableId,const char *p_Name,char p_Constant,char p_Aliased,main_unit *p_MainUnit);
+	variable(t_VariableId p_VariableId,const char *p_Name,char p_Constant,char p_Aliased,tree *p_InitTree,main_unit *p_MainUnit);
 };
 #endif

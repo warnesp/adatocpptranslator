@@ -50,17 +50,17 @@
 #include "../Table_symbol/variable_array.h"
 #include "../Table_symbol/variable_object.h"
 
-template list<component*>* getByName(char *p_Name,list<component*>* p_List);
-template list<constant_number*>* getByName(char *p_Name,list<constant_number*>* p_List);
-template list<function_spec*>* getByName(char *p_Name,list<function_spec*>* p_List);
-template list<package_rename*>* getByName(char *p_Name,list<package_rename*>* p_List);
-template list<package_spec*>* getByName(char *p_Name,list<package_spec*>* p_List);
-template list<parameter*>* getByName(char *p_Name,list<parameter*>* p_List);
-template list<type*>* getByName(char *p_Name,list<type*>* p_List);
-template list<variable_array*>* getByName(char *p_Name,list<variable_array*>* p_List);
-template list<variable_object*>* getByName(char *p_Name,list<variable_object*>* p_List);
+template list<component*>* getByName(const char *p_Name,list<component*>* p_List);
+template list<constant_number*>* getByName(const char *p_Name,list<constant_number*>* p_List);
+template list<function_spec*>* getByName(const char *p_Name,list<function_spec*>* p_List);
+template list<package_rename*>* getByName(const char *p_Name,list<package_rename*>* p_List);
+template list<package_spec*>* getByName(const char *p_Name,list<package_spec*>* p_List);
+template list<parameter*>* getByName(const char *p_Name,list<parameter*>* p_List);
+template list<type*>* getByName(const char *p_Name,list<type*>* p_List);
+template list<variable_array*>* getByName(const char *p_Name,list<variable_array*>* p_List);
+template list<variable_object*>* getByName(const char *p_Name,list<variable_object*>* p_List);
 
-template<class T> list<T>* getByName(char *p_Name,list<T>* p_List)
+template<class T> list<T>* getByName(const char *p_Name,list<T>* p_List)
 {
 	#ifdef TRACE
 	printfTraceUp("getByName",__FILE__,__LINE__);
@@ -92,3 +92,4 @@ template<class T> list<T>* getByName(char *p_Name,list<T>* p_List)
 	#endif
 	return l_Result;
 }
+

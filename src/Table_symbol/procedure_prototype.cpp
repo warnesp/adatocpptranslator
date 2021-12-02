@@ -36,7 +36,7 @@ parameter* procedure_prototype::getParameter(char *p_Name)
 	return getByName(p_Name,m_Parameters)->getItem();
 }
 
-void procedure_prototype::checkIntegrity(char *p_FileName, int p_LineNumber)
+void procedure_prototype::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

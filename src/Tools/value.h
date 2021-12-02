@@ -125,7 +125,7 @@ class tree;
 	/* $ Description :	methode wich checks the content of variable class to  */
 	/* $	detect incoherences												  */
 	/* $ -------------------------------------------------------------------- */
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 
 	/* $ -------------------------------------------------------------------- */
 	/* $ Method name : isBoolComputed										  */

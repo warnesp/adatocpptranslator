@@ -55,7 +55,7 @@ value* initialised::getInitValue(void)
 	return m_InitValue;
 }
 
-void initialised::checkIntegrity(char *p_FileName, int p_LineNumber)
+void initialised::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

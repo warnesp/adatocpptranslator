@@ -61,11 +61,11 @@ class array_type:public composite_type, public array
 	
 	public:
 	char getAliased(void);
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	array_type(void);
-	array_type(char *p_Name,array *p_Array,char p_Aliased,main_unit *p_MainUnit);
+	array_type(const char *p_Name,array *p_Array,char p_Aliased,main_unit *p_MainUnit);
 };
 
-array_type* new_array_type(char *p_Name,tree *p_ArrayTree,main_unit *p_MainUnit);
+array_type* new_array_type(const char *p_Name,tree *p_ArrayTree,main_unit *p_MainUnit);
 #endif

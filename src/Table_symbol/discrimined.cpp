@@ -49,7 +49,7 @@ list<discrim_spec*>* discrimined::getDiscrimSpecs(void)
 	return m_DiscrimSpecs;
 }
 
-void discrimined::checkIntegrity(char *p_FileName,int p_LineNumber)
+void discrimined::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

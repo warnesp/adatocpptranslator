@@ -41,7 +41,7 @@
 
 #include "procedure_prototype.h"
 
-void procedure_spec::checkIntegrity(char *p_FileName, int p_LineNumber)
+void procedure_spec::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -69,7 +69,7 @@ procedure_spec::procedure_spec(void):unit()
 	#endif
 }
 
-procedure_spec::procedure_spec(char *p_Name,tree *p_FormalPart,main_unit *p_MainUnit):unit(p_Name,p_MainUnit)
+procedure_spec::procedure_spec(const char *p_Name,tree *p_FormalPart,main_unit *p_MainUnit):unit(p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("procedure_spec",__FILE__,__LINE__);

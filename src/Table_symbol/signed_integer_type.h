@@ -47,10 +47,10 @@ class signed_integer_type: public integer_type
 	base_range *m_Range;
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	signed_integer_type(void);
-	signed_integer_type(char *p_Name,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
+	signed_integer_type(const char *p_Name,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
 	
 };
 #endif

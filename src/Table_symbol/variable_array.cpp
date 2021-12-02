@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "variable_array.h"
 
-void variable_array::checkIntegrity(char *p_FileName,int p_LineNumber)
+void variable_array::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -61,7 +61,7 @@ variable_array::variable_array(void):variable(Variable_Array),array()
 	#endif
 }
 
-variable_array::variable_array(char *p_Name,char p_Constant,char p_Aliased,array *p_Array,main_unit *p_MainUnit):variable(Variable_Array,p_Name,p_Constant,p_Aliased,p_MainUnit),array(p_Array)
+variable_array::variable_array(const char *p_Name,char p_Constant,char p_Aliased,array *p_Array,main_unit *p_MainUnit):variable(Variable_Array,p_Name,p_Constant,p_Aliased,p_MainUnit),array(p_Array)
 {
 	#ifdef TRACE
 	printfTraceUp("variable_array",__FILE__,__LINE__);
@@ -71,7 +71,7 @@ variable_array::variable_array(char *p_Name,char p_Constant,char p_Aliased,array
 	#endif
 }
 
-variable_array::variable_array(char *p_Name,char p_Constant,char p_Aliased,array *p_Array,tree *p_InitTree,main_unit *p_MainUnit):variable(Variable_Array,p_Name,p_Constant,p_Aliased,p_InitTree,p_MainUnit),array(p_Array)
+variable_array::variable_array(const char *p_Name,char p_Constant,char p_Aliased,array *p_Array,tree *p_InitTree,main_unit *p_MainUnit):variable(Variable_Array,p_Name,p_Constant,p_Aliased,p_InitTree,p_MainUnit),array(p_Array)
 {
 	#ifdef TRACE
 	printfTraceUp("variable_array",__FILE__,__LINE__);
@@ -81,7 +81,7 @@ variable_array::variable_array(char *p_Name,char p_Constant,char p_Aliased,array
 	#endif
 }
 
-variable_array *new_variable_array(char *p_Name,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDefTree,tree *p_InitTree,main_unit *p_MainUnit)
+variable_array *new_variable_array(const char *p_Name,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDefTree,tree *p_InitTree,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_variable_array",__FILE__,__LINE__);

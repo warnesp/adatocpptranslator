@@ -60,10 +60,10 @@ class task:public main_unit
 	public:
 	t_TaskType getTaskType(void);
 	
-	void checkIntegrity(char *p_FileName,int p_Linenumber);
+	void checkIntegrity(const char *p_FileName,int p_Linenumber);
 
 	task(void);
-	task(t_TaskType p_TaskType,char *p_Name,main_unit *p_CurrentMainUnit);
+	task(t_TaskType p_TaskType, const char *p_Name,main_unit *p_CurrentMainUnit);
 };
 
 #endif

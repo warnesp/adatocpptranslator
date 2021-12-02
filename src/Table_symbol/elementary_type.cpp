@@ -46,7 +46,7 @@ void displayElementaryTypeId(t_ElementaryTypeId p_ElementaryTypeId)
 	}
 }
 
-void elementary_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void elementary_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -100,7 +100,7 @@ elementary_type::elementary_type(t_ElementaryTypeId p_ElementaryTypeId):type(Typ
 }
 
 
-elementary_type::elementary_type(t_ElementaryTypeId p_ElementaryTypeId,char *p_Name,main_unit *p_MainUnit):type(Type_Elementary,p_Name,p_MainUnit)
+elementary_type::elementary_type(t_ElementaryTypeId p_ElementaryTypeId,const char *p_Name,main_unit *p_MainUnit):type(Type_Elementary,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("elementary_type",__FILE__,__LINE__);

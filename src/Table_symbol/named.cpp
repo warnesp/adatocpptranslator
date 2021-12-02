@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "named.h"
 
-void named::checkIntegrity(char *p_FileName, int p_LineNumber)
+void named::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	int error=0;
 	
@@ -48,7 +48,7 @@ void named::checkIntegrity(char *p_FileName, int p_LineNumber)
 	}
 }
 
-char* named::getName()
+const char* named::getName()
 {
 	return m_Name;
 }
@@ -64,7 +64,7 @@ named::named(void)
 	m_Name=NULL;
 }
 	
-named::named(char *p_Name)
+named::named(const char *p_Name)
 {
 	m_Name=p_Name;
 	this->checkIntegrity(__FILE__,__LINE__);

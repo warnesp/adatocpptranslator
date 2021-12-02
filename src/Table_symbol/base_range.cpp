@@ -35,7 +35,7 @@
  *****************************************************************************/
 #include "base_range.h"
 
-void base_range::checkIntegrity(char *p_FileName,int p_LineNumber)
+void base_range::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);

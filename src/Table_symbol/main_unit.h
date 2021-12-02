@@ -101,14 +101,14 @@ class main_unit: public unit
 	list<variable_object*>* getVariableObjects(void);
 	
 	/* Advanced get */
-	constant_number* getConstantNumber(char *p_Name);
+	constant_number* getConstantNumber(const char *p_Name);
 	file* getFile(void);
-	function_spec* getFunctionSpec(char *p_Name);
+	function_spec* getFunctionSpec(const char *p_Name);
 	list<named*>* getGlobalWithDependancies(void);
 	package* getPackage(void);
-	package_rename* getPackageRename(char *p_Name);
-	type* getType(char *p_Name);
-	virtual variable* getVariable(char *p_Name);
+	package_rename* getPackageRename(const char *p_Name);
+	type* getType(const char *p_Name);
+	virtual variable* getVariable(const char *p_Name);
 	
 	void add(constant_number *p_Constant);
 	void add(function_spec *p_Constant);
@@ -122,10 +122,10 @@ class main_unit: public unit
 	void add(variable_array *p_VariableArray);
 	void add(variable_object *p_VariableObject);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	main_unit(void);
-	main_unit(t_MainUnitType p_MainUnitType,char *p_Name,main_unit *p_MainUnit);
+	main_unit(t_MainUnitType p_MainUnitType,const char *p_Name,main_unit *p_MainUnit);
 };
 
 #endif

@@ -36,9 +36,9 @@
 
 #include "tree_string_representation.h"
 
-char* getString(tree *p_Tree)
+const char* getString(tree *p_Tree)
 {
-	char *result=NULL;
+	const char *result=NULL;
 	
 	if(p_Tree!=NULL)
 	{
@@ -53,7 +53,7 @@ char* getString(tree *p_Tree)
 			case Node_Ada_Mark_Point:
 			case Node_Ada_Compound_Name:
 			{
-				char *s1=NULL,*s2=NULL;
+				const char *s1=NULL,*s2=NULL;
 				s1=getString(p_Tree->getSon(0));
 				s2=getString(p_Tree->getSon(1));
 				result=myStrcat(3,s1,".",s2);
@@ -65,6 +65,10 @@ char* getString(tree *p_Tree)
 			result=getString(p_Tree->getSon(0));
 			break;
 			
+            //case Node_Ada_Attribute:
+            //result = "Foo";
+            //break;
+
 			default:
 			printf("ERROR : %s %i : node type \"",__FILE__,__LINE__);
 			displayNodeType(p_Tree->getNodeType());

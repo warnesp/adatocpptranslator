@@ -41,11 +41,11 @@
 
 #include "tree.h"
 
-void errorIsNull(char *p_FileName,int p_LineNumber,char *p_Name);
-void errorLogManage(FILE *p_Fp,int p_NumLine,char *p_Comment);
-void errorNotAllowed(char *p_FileName,int p_LineNumber,tree *p_Tree, char *p_RuleName);
-void errorNbSon(char *p_FileName,int p_LineNumber,tree *p_Tree);
-void errorGeneric(char *p_FileName,int p_LineNumber,char *p_ErrorMessage);
+void errorIsNull(const char *p_FileName,int p_LineNumber, const char *p_Name);
+void errorLogManage(FILE *p_Fp,int p_NumLine,const char *p_Comment);
+void errorNotAllowed(const char *p_FileName,int p_LineNumber,tree *p_Tree, const char *p_RuleName);
+void errorNbSon(const char *p_FileName,int p_LineNumber,tree *p_Tree);
+void errorGeneric(const char *p_FileName,int p_LineNumber,const char *p_ErrorMessage);
 void my_exit(int p_NumError);
 
 #endif

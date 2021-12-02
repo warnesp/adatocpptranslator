@@ -56,11 +56,11 @@ class scalar_type: public elementary_type
 	
 	public:
 	t_ScalarTypeId getScalarTypeId(void);
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	scalar_type(void);
 	scalar_type(t_ScalarTypeId p_ScalarTypeId);
-	scalar_type(t_ScalarTypeId p_ScalarTypeId,char *p_Name,main_unit *p_MainUnit);
+	scalar_type(t_ScalarTypeId p_ScalarTypeId,const char *p_Name,main_unit *p_MainUnit);
 };
 
 #endif

@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "variable_object.h"
 
-void variable_object::checkIntegrity(char *p_FileName, int p_LineNumber)
+void variable_object::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -61,7 +61,7 @@ variable_object::variable_object(void):variable(Variable_Object),subtyped()
 	#endif
 }
 
-variable_object::variable_object(char *p_Name,char p_Constant,char p_Aliased,subtyped *p_Subtyped,main_unit *p_MainUnit):variable(Variable_Object,p_Name,p_Constant,p_Aliased,p_MainUnit),subtyped(p_Subtyped)
+variable_object::variable_object(const char *p_Name,char p_Constant,char p_Aliased,subtyped *p_Subtyped,main_unit *p_MainUnit):variable(Variable_Object,p_Name,p_Constant,p_Aliased,p_MainUnit),subtyped(p_Subtyped)
 {
 	#ifdef TRACE
 	printfTraceUp("variable_object",__FILE__,__LINE__);
@@ -71,7 +71,7 @@ variable_object::variable_object(char *p_Name,char p_Constant,char p_Aliased,sub
 	#endif
 }
 
-variable_object::variable_object(char *p_Name,char p_Constant,char p_Aliased,subtyped *p_Subtyped,tree *p_InitTree,main_unit *p_MainUnit):variable(Variable_Object,p_Name,p_Constant,p_Aliased,p_InitTree,p_MainUnit),subtyped(p_Subtyped)
+variable_object::variable_object(const char *p_Name,char p_Constant,char p_Aliased,subtyped *p_Subtyped,tree *p_InitTree,main_unit *p_MainUnit):variable(Variable_Object,p_Name,p_Constant,p_Aliased,p_InitTree,p_MainUnit),subtyped(p_Subtyped)
 {
 	#ifdef TRACE
 	printfTraceUp("variable_object",__FILE__,__LINE__);
@@ -81,7 +81,7 @@ variable_object::variable_object(char *p_Name,char p_Constant,char p_Aliased,sub
 	#endif
 }
 
-variable_object *new_variable_object(char *p_Name,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDefTree,tree *p_InitTree,main_unit *p_MainUnit)
+variable_object *new_variable_object(const char *p_Name,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDefTree,tree *p_InitTree,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_variable_object",__FILE__,__LINE__);

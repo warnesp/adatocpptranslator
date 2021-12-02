@@ -48,13 +48,13 @@ class component: public named, public object, public subtyped
 	private:
 	
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	component(void);
-	component(char *p_Name,char p_Aliased,subtyped *p_Subtyped);
-	component(char *p_Name,char p_Aliased,subtyped *p_Subtyped,tree *p_InitTree);
+	component(const char *p_Name,char p_Aliased,subtyped *p_Subtyped);
+	component(const char *p_Name,char p_Aliased,subtyped *p_Subtyped,tree *p_InitTree);
 };
 
-component* new_component(char *p_Name,tree *p_ComponentSubtypeDefTree, tree *p_InitTree);
+component* new_component(const char *p_Name,tree *p_ComponentSubtypeDefTree, tree *p_InitTree);
 
 #endif

@@ -41,7 +41,7 @@ void displayAccessTypeId(t_AccessTypeId p_AccessTypeId)
 	}
 }
 
-void access_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void access_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -95,7 +95,7 @@ access_type::access_type(t_AccessTypeId p_AccessTypeId):elementary_type(Elementa
 }
 
 
-access_type::access_type(t_AccessTypeId p_AccessTypeId,char *p_Name,main_unit *p_MainUnit):elementary_type(Elementary_Type_Access,p_Name,p_MainUnit)
+access_type::access_type(t_AccessTypeId p_AccessTypeId,const char *p_Name,main_unit *p_MainUnit):elementary_type(Elementary_Type_Access,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("access_type",__FILE__,__LINE__);

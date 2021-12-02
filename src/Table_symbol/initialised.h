@@ -56,7 +56,7 @@ class initialised
 	char getBoolInitValue(void);
 	value* getInitValue(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	initialised(void);
 	initialised(tree *p_InitTree);

@@ -49,13 +49,13 @@ class decimal_fixed_type: public fixed_type
 	public:
 	tree *getDigit(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	decimal_fixed_type(void);
-	decimal_fixed_type(char *p_Name,tree *p_Delta,tree *p_Digit, main_unit *p_MainUnit);
-	decimal_fixed_type(char *p_Name,tree *p_Delta,tree *p_Digit, tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
+	decimal_fixed_type(const char *p_Name,tree *p_Delta,tree *p_Digit, main_unit *p_MainUnit);
+	decimal_fixed_type(const char *p_Name,tree *p_Delta,tree *p_Digit, tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit);
 
 };
 
-decimal_fixed_type* new_decimal_fixed_type(char *p_Name,tree *p_Delta,tree *p_Digit, tree *p_Range, main_unit *p_MainUnit);
+decimal_fixed_type* new_decimal_fixed_type(const char *p_Name,tree *p_Delta,tree *p_Digit, tree *p_Range, main_unit *p_MainUnit);
 #endif

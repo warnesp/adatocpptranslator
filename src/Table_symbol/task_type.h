@@ -45,13 +45,13 @@ class task_type:public task,public discrimined
 	protected :
 		
 	public:
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	task_type(void);
-	task_type(char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_CurrentMainUnit);
+	task_type(const char *p_Name,char p_BoolGeneric,list<discrim_spec*> *p_DiscrimSpecs,main_unit *p_CurrentMainUnit);
 	
 	
 };
 
-task_type *new_task_type(char *p_Name,tree *p_DiscrimSpecsTree,main_unit *p_CurrentMainUnit);
+task_type *new_task_type(const char *p_Name,tree *p_DiscrimSpecsTree,main_unit *p_CurrentMainUnit);
 #endif

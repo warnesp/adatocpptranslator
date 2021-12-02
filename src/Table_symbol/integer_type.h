@@ -56,11 +56,11 @@ class integer_type: public discrete_type
 	
 	public:
 	t_IntegerTypeId getIntegerTypeId(void);
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	integer_type(void);
 	integer_type(t_IntegerTypeId p_IntegerTypeId);
-	integer_type(t_IntegerTypeId p_IntegerTypeId,char *p_Name,main_unit *p_MainUnit);
+	integer_type(t_IntegerTypeId p_IntegerTypeId,const char *p_Name,main_unit *p_MainUnit);
 };
 
 #endif

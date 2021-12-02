@@ -158,7 +158,7 @@ list<variable_object*>* main_unit::getVariableObjects(void)
 
 /* Advanced get */
 /****************/
-constant_number* main_unit::getConstantNumber(char *p_Name)
+constant_number* main_unit::getConstantNumber(const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("getConstantNumber",__FILE__,__LINE__);
@@ -218,7 +218,7 @@ file* main_unit::getFile(void)
 	return result;
 }
 
-function_spec* main_unit::getFunctionSpec(char *p_Name)
+function_spec* main_unit::getFunctionSpec(const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("getFunctionSpec",__FILE__,__LINE__);
@@ -300,7 +300,7 @@ package* main_unit::getPackage(void)
 	return l_Result;
 }
 
-package_rename* main_unit::getPackageRename(char *p_Name)
+package_rename* main_unit::getPackageRename(const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("getPackageRename",__FILE__,__LINE__);
@@ -341,7 +341,7 @@ package_rename* main_unit::getPackageRename(char *p_Name)
 	return l_Result;
 }
 
-type* main_unit::getType(char *p_Name)
+type* main_unit::getType(const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("getType",__FILE__,__LINE__);
@@ -381,7 +381,7 @@ type* main_unit::getType(char *p_Name)
 	
 }
 
-variable* main_unit::getVariable(char *p_Name)
+variable* main_unit::getVariable(const char *p_Name)
 {
 	#ifdef TRACE
 	printfTraceUp("getVariable",__FILE__,__LINE__);
@@ -549,7 +549,7 @@ void main_unit::add(variable_object *p_VariableObject)
 	#endif
 }
 
-void main_unit::checkIntegrity(char *p_FileName,int p_LineNumber)
+void main_unit::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -593,7 +593,7 @@ main_unit::main_unit(void):unit()
 	
 }
 	
-main_unit::main_unit(t_MainUnitType p_MainUnitType,char *p_Name,main_unit *p_MainUnit):unit(p_Name,p_MainUnit)
+main_unit::main_unit(t_MainUnitType p_MainUnitType,const char *p_Name,main_unit *p_MainUnit):unit(p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("main_unit",__FILE__,__LINE__);

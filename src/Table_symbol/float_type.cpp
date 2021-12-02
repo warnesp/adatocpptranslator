@@ -41,7 +41,7 @@ tree* float_type::getDigit(void)
 	return m_Digit;
 }
 
-void float_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void float_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -76,7 +76,7 @@ float_type::float_type(void):real_type(Real_Type_Floating)
 	#endif
 }
 
-float_type::float_type(char *p_Name,tree *p_Digit,main_unit *p_MainUnit):real_type(Real_Type_Floating,p_Name,p_MainUnit)
+float_type::float_type(const char *p_Name,tree *p_Digit,main_unit *p_MainUnit):real_type(Real_Type_Floating,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("float_type",__FILE__,__LINE__);
@@ -88,7 +88,7 @@ float_type::float_type(char *p_Name,tree *p_Digit,main_unit *p_MainUnit):real_ty
 	#endif
 }
 
-float_type::float_type(char *p_Name,tree *p_Digit,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit):real_type(Real_Type_Floating,p_Name,p_LowerBound,p_UpperBound,p_MainUnit)
+float_type::float_type(const char *p_Name,tree *p_Digit,tree *p_LowerBound, tree *p_UpperBound, main_unit *p_MainUnit):real_type(Real_Type_Floating,p_Name,p_LowerBound,p_UpperBound,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("float_type",__FILE__,__LINE__);
@@ -100,7 +100,7 @@ float_type::float_type(char *p_Name,tree *p_Digit,tree *p_LowerBound, tree *p_Up
 	#endif
 }
 
-float_type* new_float_type(char *p_Name,tree *p_Digit, tree *p_Range,main_unit *p_MainUnit)
+float_type* new_float_type(const char *p_Name,tree *p_Digit, tree *p_Range,main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_float_type",__FILE__,__LINE__);

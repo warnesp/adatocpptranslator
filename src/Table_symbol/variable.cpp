@@ -55,7 +55,7 @@ char variable::getBoolConstant(void)
 	return m_BoolConstant;
 }
 
-void variable::checkIntegrity(char *p_FileName,int p_LineNumber)
+void variable::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -104,7 +104,7 @@ variable::variable(t_VariableId p_VariableId)
 	printfTraceDown("variable",__FILE__,__LINE__);
 	#endif
 }	
-variable::variable(t_VariableId p_VariableId,char *p_Name,char p_Constant,char p_Aliased,main_unit *p_MainUnit):unit(p_Name,p_MainUnit),object(p_Aliased)
+variable::variable(t_VariableId p_VariableId,const char *p_Name,char p_Constant,char p_Aliased,main_unit *p_MainUnit):unit(p_Name,p_MainUnit),object(p_Aliased)
 {
 	#ifdef TRACE
 	printfTraceUp("variable",__FILE__,__LINE__);
@@ -116,7 +116,7 @@ variable::variable(t_VariableId p_VariableId,char *p_Name,char p_Constant,char p
 	#endif
 }
 
-variable::variable(t_VariableId p_VariableId,char *p_Name,char p_Constant,char p_Aliased,tree *p_InitTree,main_unit *p_MainUnit):unit(p_Name,p_MainUnit),object(p_Aliased,p_InitTree)
+variable::variable(t_VariableId p_VariableId,const char *p_Name,char p_Constant,char p_Aliased,tree *p_InitTree,main_unit *p_MainUnit):unit(p_Name,p_MainUnit),object(p_Aliased,p_InitTree)
 {
 	#ifdef TRACE
 	printfTraceUp("variable",__FILE__,__LINE__);

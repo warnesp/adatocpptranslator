@@ -39,7 +39,7 @@
  *****************************************************************************/
 #include "access_function_type.h"
 
-void access_function_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void access_function_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 		printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -68,7 +68,7 @@ access_function_type::access_function_type(void):access_subprog_type(Access_Subp
 	
 }
 
-access_function_type::access_function_type(char *p_Name,tree *p_ProtectedTree,tree *p_ParametersTree,tree *p_ReturnTypeTree, main_unit *p_MainUnit):access_subprog_type(Access_Subprog_Type_Function,p_ProtectedTree,p_Name,p_ParametersTree,p_ReturnTypeTree,p_MainUnit)
+access_function_type::access_function_type(const char *p_Name,tree *p_ProtectedTree,tree *p_ParametersTree,tree *p_ReturnTypeTree, main_unit *p_MainUnit):access_subprog_type(Access_Subprog_Type_Function,p_ProtectedTree,p_Name,p_ParametersTree,p_ReturnTypeTree,p_MainUnit)
 {
 	#ifdef TRACE
 		printfTraceUp("access_function_type",__FILE__,__LINE__);

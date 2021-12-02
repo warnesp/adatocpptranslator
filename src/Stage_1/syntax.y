@@ -70,7 +70,7 @@ int yylex(void);
  * Modified variable : none
  * Description : function which display the syntax error return by bison
  *****************************************************************************/
-void yyerror(char* s)
+void yyerror(const char* s)
 {
   extern char *yytext;
   printf ("\n***** Syntax error : %s on \"%s\" line %i\n",s,yytext,g_LineNumber);
@@ -570,13 +570,13 @@ range : simple_expression INTER_Lex simple_expression
 	$$ = new tree(Node_Ada_Range_Inter,$1,$3,$1->getNumLine());
 	#endif
 	}
-	| name ''' RANGE_Lex
+	| name '\'' RANGE_Lex
 	{
 	#ifdef ARBRE
 	$$ = new tree(Node_Ada_Range,$1,$1->getNumLine());
 	#endif
 	}
-	| name ''' RANGE_Lex '(' expression ')'
+	| name '\'' RANGE_Lex '(' expression ')'
 	{
 	#ifdef ARBRE
 	$$ = new tree(Node_Ada_Range,$1,$5,$1->getNumLine());
@@ -975,7 +975,7 @@ variant : WHEN_Lex choice_s ARROW_Lex pragma_s comp_list
 choice_s : choice
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| choice_s '|' choice
@@ -989,13 +989,13 @@ choice_s : choice
 choice : expression
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| discrete_with_range
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| OTHERS_Lex
@@ -1015,7 +1015,7 @@ discrete_with_range : name range_constraint
 	| range
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	;
@@ -1075,7 +1075,7 @@ decl_part :
 	| decl_item_or_body_s1
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	;
@@ -1089,7 +1089,7 @@ decl_item_s :
 	| decl_item_s1
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	;
@@ -1097,7 +1097,7 @@ decl_item_s :
 decl_item_s1 : decl_item
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| decl_item decl_item_s1
@@ -1111,25 +1111,25 @@ decl_item_s1 : decl_item
 decl_item : decl
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| use_clause
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| rep_spec
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| pragma
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	;
@@ -1137,7 +1137,7 @@ decl_item : decl
 decl_item_or_body_s1 : decl_item_or_body
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| decl_item_or_body_s1 decl_item_or_body
@@ -1165,13 +1165,13 @@ decl_item_or_body : body
 body : subprog_body
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| pkg_body
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| task_body
@@ -1227,7 +1227,7 @@ mark : simple_name
 	$$ = $1;
 	#endif
 	}
-	| mark ''' attribute_id
+	| mark '\'' attribute_id
 	{
 	#ifdef ARBRE
 	$$ = new tree(Node_Ada_Mark_Quote, $1, $3, $1->getNumLine());
@@ -1352,7 +1352,7 @@ selected_comp : name '.' simple_name
 	}
 	;
 
-attribute : name ''' attribute_id
+attribute : name '\'' attribute_id
 	{
 	#ifdef ARBRE
 	$$ = new tree(Node_Ada_Attribute, $1, $3, $1->getNumLine());
@@ -1721,7 +1721,7 @@ parenthesized_primary : aggregate
 	}
 	;
 
-qualified : name ''' parenthesized_primary
+qualified : name '\'' parenthesized_primary
 	{
 	#ifdef ARBRE
 	$$ = new tree(Node_Ada_Qualified, $1,$3, $1->getNumLine());
@@ -3127,7 +3127,7 @@ unit : pkg_decl
 	| subprog_body
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| subunit
@@ -3139,7 +3139,7 @@ unit : pkg_decl
 	| generic_decl
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| rename_unit
@@ -3162,7 +3162,7 @@ subunit : SEPARATE_Lex '(' compound_name ')'
 subunit_body : subprog_body
 	{
 	#ifdef ARBRE
-	$$ = $1
+	$$ = $1;
 	#endif
 	}
 	| pkg_body

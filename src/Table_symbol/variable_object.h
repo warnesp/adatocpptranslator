@@ -46,13 +46,13 @@ class variable_object: public variable, public subtyped
 {
 	private:
 	public:
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	variable_object(void);
-	variable_object(char *p_Name,char p_Constant,char p_Aliased,subtyped *p_Subtyped,main_unit *p_MainUnit);
-	variable_object(char *p_Name,char p_Constant,char p_Aliased,subtyped *p_Subtyped,tree *p_InitTree,main_unit *p_MainUnit);
+	variable_object(const char *p_Name,char p_Constant,char p_Aliased,subtyped *p_Subtyped,main_unit *p_MainUnit);
+	variable_object(const char *p_Name,char p_Constant,char p_Aliased,subtyped *p_Subtyped,tree *p_InitTree,main_unit *p_MainUnit);
 };
 
-variable_object *new_variable_object(char *p_Name,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDefTree,tree *p_InitTree,main_unit *p_MainUnit);
+variable_object *new_variable_object(const char *p_Name,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDefTree,tree *p_InitTree,main_unit *p_MainUnit);
 
 #endif

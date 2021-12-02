@@ -46,13 +46,13 @@
  {
  	private:
 	public:
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
 	variable_array(void);
-	variable_array(char *p_Name,char p_Constant,char p_Aliased,array *p_Array,main_unit *p_MainUnit);
-	variable_array(char *p_Name,char p_Constant,char p_Aliased,array *p_Array,tree *p_InitTree,main_unit *p_MainUnit);
+	variable_array(const char *p_Name,char p_Constant,char p_Aliased,array *p_Array,main_unit *p_MainUnit);
+	variable_array(const char *p_Name,char p_Constant,char p_Aliased,array *p_Array,tree *p_InitTree,main_unit *p_MainUnit);
 
  };
 
-variable_array *new_variable_array(char *p_Name,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDefTree,tree *p_InitTree,main_unit *p_MainUnit);
+variable_array *new_variable_array(const char *p_Name,tree *p_ObjectQualifierTree, tree *p_ObjectSubtypeDefTree,tree *p_InitTree,main_unit *p_MainUnit);
 #endif

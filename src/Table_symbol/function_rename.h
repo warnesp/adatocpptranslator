@@ -61,8 +61,8 @@ class function_rename:public function_spec,public renamed
 	public:
 	char getBoolGeneric(void);
 	
-	void checkIntegrity(char *p_FileName,int p_LineNumber);
+	void checkIntegrity(const char *p_FileName,int p_LineNumber);
 	
-	function_rename(char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit);
+	function_rename(const char *p_Name,tree *p_FormalPartTree,tree *p_ReturnTypeTree,const char *p_OriginalName,char p_BoolGeneric,main_unit *p_MainUnit);
 };
 #endif

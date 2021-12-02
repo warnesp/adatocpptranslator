@@ -81,7 +81,7 @@ void parameter::display(void)
 	
 }
 
-void parameter::checkIntegrity(char *p_FileName,int p_LineNumber)
+void parameter::checkIntegrity(const char *p_FileName,int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -122,7 +122,7 @@ parameter::parameter(void):variable_object()
 	
 }
 
-parameter::parameter(char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_ParameterMode,main_unit *p_MainUnit):variable_object(p_Name,0,0,p_Subtyped,p_MainUnit)
+parameter::parameter(const char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_ParameterMode,main_unit *p_MainUnit):variable_object(p_Name,0,0,p_Subtyped,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("parameter",__FILE__,__LINE__);
@@ -137,7 +137,7 @@ parameter::parameter(char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_Paramet
 	
 }
 
-parameter::parameter(char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_ParameterMode,tree *p_InitTree,main_unit *p_MainUnit):variable_object(p_Name,0,0,p_Subtyped,p_InitTree,p_MainUnit)
+parameter::parameter(const char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_ParameterMode,tree *p_InitTree,main_unit *p_MainUnit):variable_object(p_Name,0,0,p_Subtyped,p_InitTree,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("parameter",__FILE__,__LINE__);
@@ -152,7 +152,7 @@ parameter::parameter(char *p_Name,subtyped *p_Subtyped,t_ParameterMode p_Paramet
 	
 }
 
-parameter* new_parameter(char *p_Name,tree *p_TypeTree,tree *p_ParameterModeTree,tree *p_InitTree, main_unit *p_MainUnit)
+parameter* new_parameter(const char *p_Name,tree *p_TypeTree,tree *p_ParameterModeTree,tree *p_InitTree, main_unit *p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("new_parameter",__FILE__,__LINE__);

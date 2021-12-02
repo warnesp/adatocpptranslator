@@ -53,7 +53,7 @@ class variant
 	list<tree*>* getChoices(void);
 	component_list* getComponentList(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	void display(void);
 	
 	variant(void);

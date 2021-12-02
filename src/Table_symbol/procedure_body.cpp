@@ -40,7 +40,7 @@
 #include "procedure_body.h"
 #include "procedure_prototype.h"
 
-void procedure_body::checkIntegrity(char *p_FileName, int p_LineNumber)
+void procedure_body::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -72,7 +72,7 @@ list<parameter*>* procedure_body::getParameters(void)
 		#endif
 	}
 
-	procedure_body::procedure_body(char *p_Name,tree *p_FormalPartTree,main_unit *p_MainUnit):main_unit(Main_Unit_Procedure_Body,p_Name,p_MainUnit)
+	procedure_body::procedure_body(const char *p_Name,tree *p_FormalPartTree,main_unit *p_MainUnit):main_unit(Main_Unit_Procedure_Body,p_Name,p_MainUnit)
 	{
 		#ifdef TRACE
 		printfTraceUp("procedure_body",__FILE__,__LINE__);

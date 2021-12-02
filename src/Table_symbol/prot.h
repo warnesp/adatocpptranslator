@@ -59,9 +59,9 @@ class prot: public main_unit
 	public:
 	t_ProtType getProtType(void);
 	
-	void checkIntegrity(char *p_FileName, int p_LineNumber);
+	void checkIntegrity(const char *p_FileName, int p_LineNumber);
 	
 	prot(void);
-	prot(t_ProtType p_ProtType,char *p_Name,main_unit *p_CurrentMainUnit);
+	prot(t_ProtType p_ProtType,const char *p_Name,main_unit *p_CurrentMainUnit);
 };
 #endif

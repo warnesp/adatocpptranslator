@@ -27,7 +27,7 @@
  *****************************************************************************/
 #include "access_procedure_type.h"
 
-void access_procedure_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void access_procedure_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 		printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -56,7 +56,7 @@ access_procedure_type::access_procedure_type(void):access_subprog_type(Access_Su
 	
 }
 
-access_procedure_type::access_procedure_type(char *p_Name,tree *p_ProtectedTree,tree *p_ParametersTree, main_unit *p_MainUnit):access_subprog_type(Access_Subprog_Type_Procedure,p_ProtectedTree,p_Name,p_ParametersTree,p_MainUnit)
+access_procedure_type::access_procedure_type(const char *p_Name,tree *p_ProtectedTree,tree *p_ParametersTree, main_unit *p_MainUnit):access_subprog_type(Access_Subprog_Type_Procedure,p_ProtectedTree,p_Name,p_ParametersTree,p_MainUnit)
 {
 	#ifdef TRACE
 		printfTraceUp("access_procedure_type",__FILE__,__LINE__);

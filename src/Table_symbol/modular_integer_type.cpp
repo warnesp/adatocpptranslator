@@ -32,7 +32,7 @@
  *****************************************************************************/
 #include "modular_integer_type.h"
 
-void modular_integer_type::checkIntegrity(char *p_FileName, int p_LineNumber)
+void modular_integer_type::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {	
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -67,7 +67,7 @@ modular_integer_type::modular_integer_type(void):integer_type(Integer_Type_Modul
 	#endif
 }
 
-modular_integer_type::modular_integer_type(char *p_Name,tree *p_Modulo, main_unit *p_MainUnit):integer_type(Integer_Type_Modular,p_Name,p_MainUnit)
+modular_integer_type::modular_integer_type(const char *p_Name,tree *p_Modulo, main_unit *p_MainUnit):integer_type(Integer_Type_Modular,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("modular_integer_type",__FILE__,__LINE__);

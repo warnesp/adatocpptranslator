@@ -32,12 +32,12 @@
  *****************************************************************************/
 #include "subunit.h"
 
-char* subunit::getParentUnitName(void)
+const char* subunit::getParentUnitName(void)
 {
 	return m_ParentUnitName;
 }
 
-void subunit::checkIntegrity(char *p_FileName, int p_LineNumber)
+void subunit::checkIntegrity(const char *p_FileName, int p_LineNumber)
 {
 	#ifdef TRACE
 	printfTraceUp("checkIntegrity",__FILE__,__LINE__);
@@ -73,7 +73,7 @@ subunit::subunit(void):package()
 	#endif
 }
 
-subunit::subunit(char *p_Name,char *p_ParentUnitName,main_unit *p_MainUnit):package(Subunit,p_Name,p_MainUnit)
+subunit::subunit(const char *p_Name,const char *p_ParentUnitName,main_unit *p_MainUnit):package(Subunit,p_Name,p_MainUnit)
 {
 	#ifdef TRACE
 	printfTraceUp("subunit",__FILE__,__LINE__);

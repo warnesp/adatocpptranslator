@@ -41,6 +41,6 @@
 #include "tree.h"
 #include "my_string.h"
 
-char* getString(tree *p_Tree);
+const char* getString(tree *p_Tree);
 void write(FILE *p_Fp);
 #endif
