@@ -36,6 +36,8 @@
  *****************************************************************************/
 #include "translator.h"
 
+#include <string.h>
+
 int main(int argc, char** argv)
 {
 	// Display informations on Adatoccpptranslator current version
@@ -44,9 +46,15 @@ int main(int argc, char** argv)
 	
 	if(argc != 2)
 	{
-		printf("ERROR : %s %i : this program must have one argument\n", __FILE__, __LINE__);
+		printf("ERROR : %s %i : this program must have one argument (file containing list of files to translate)\n", __FILE__, __LINE__);
 		exit(-1);
 	}
+    else if(strcmp(argv[1], "-h") ||
+            strcmp(argv[1], "--help"))
+    {
+        printf("Takes one argument that is a file name which contains a list of files to translate. One file per line.\n");
+        exit(0);
+    }
 	
 	const char *l_Name = argv[1];
 	
