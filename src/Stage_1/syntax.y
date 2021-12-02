@@ -46,6 +46,7 @@
 #include <stdlib.h>
 
 #include "../src/Tools/tree.h"
+#define YYERROR_VERBOSE 1
 #define YYMAXDEPTH 50000
 #define YYINITDEPTH 10000
 #define ARBRE

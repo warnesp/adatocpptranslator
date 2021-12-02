@@ -65,9 +65,9 @@ const char* getString(tree *p_Tree)
 			result=getString(p_Tree->getSon(0));
 			break;
 			
-            //case Node_Ada_Attribute:
-            //result = "Foo";
-            //break;
+            case Node_Ada_Attribute:
+            result = "/*Foo TODO Parse Ada Attribute correctly */";
+            break;
 
 			default:
 			printf("ERROR : %s %i : node type \"",__FILE__,__LINE__);

@@ -46,6 +46,8 @@
 //this define allow to make flex use jt_seq instead of yylex
 #define YY_DECL int jt_seq (void)
 
+#define VERBOSE 1
+
 //#define yywrap() 1
 #include "../obj/y.tab.h"
 
