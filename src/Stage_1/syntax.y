@@ -402,6 +402,13 @@ type_decl : TYPE_Lex IDF_Lex ';'
 	$$ = new tree(Node_Ada_Type_Decl,$2,$1->getNumLine());
 	#endif
 	}
+    |
+    TYPE_Lex IDF_Lex discrim_part_opt ';'
+    {
+	#ifdef ARBRE
+	$$ = new tree(Node_Ada_Type_Decl,$2,$1->getNumLine());
+	#endif
+	}
 	|
 	TYPE_Lex IDF_Lex discrim_part_opt IS_Lex type_def ';'
 	{

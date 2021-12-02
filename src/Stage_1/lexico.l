@@ -70,7 +70,7 @@ Exposant	(E|e)(\+|-)?{Entier}
 LitteralBase	{Entier}\#{EntierBase}(\.{EntierBase})?#({Exposant})?
 LitteralDecimal	{Entier}(\.{Entier})?({Exposant})?
 LitteralCaractere [\040\041]|[\043-\176]
-LitteralChaine	\"({LitteralCaractere}|'""')*\"
+LitteralChaine	\"({LitteralCaractere}|\"\")*\"
 Commentaire	\-\-([\0-\11]|[\13\14]|[\16-\377])* 
 Separateur      [\t]|[\040]+
 
