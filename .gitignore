@@ -34,3 +34,6 @@
 #output directories
 bin
 obj
+
+#vim
+*.swp
