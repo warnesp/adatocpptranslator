@@ -49,7 +49,7 @@ typedef enum
 	Variable_Undefined
 }t_VariableId;
 
-void displayVariableid(t_VariableId p_VariableId);
+void displayVariableId(t_VariableId p_VariableId);
 
 class variable:public unit, public object
 {
