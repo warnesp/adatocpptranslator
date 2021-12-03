@@ -209,6 +209,7 @@ double value::getNumValue(void)
 	if(m_BoolComputable == 0)
 	{
 		errorGeneric(__FILE__,__LINE__,"Numeric value is not computable");
+        printf("   line number: \"%i\" \n", m_Tree ? m_Tree->getNumLine() : -1);
 		l_Error=1;
 	}
 
