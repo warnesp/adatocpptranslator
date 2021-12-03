@@ -90,7 +90,6 @@ char g_InComment=0;
  *****************************************************************************/
 tree* translationUnconstraintObjectArray( FILE *p_FpLog, tree *p_Tree);
 
-
 tree* translation(FILE *p_FpLog, tree *p_Tree)
 {
 	tree *l_Result = NULL;
@@ -1429,7 +1428,12 @@ tree* translation(FILE *p_FpLog, tree *p_Tree)
 			break;
 			
 			case Node_Ada_Rename_Unit_Package:
-			l_Result = new tree( Node_C_Define, p_Tree->getSon(0), p_Tree->getSon(1)->getSon(0), p_Tree->getNumLine() );
+            if(p_Tree->getSon(1)->getNbSon() > 0) {
+                l_Result = new tree( Node_C_Define, p_Tree->getSon(0), p_Tree->getSon(1)->getSon(0), p_Tree->getNumLine() );
+            } else {
+                printf("WARNING: could not find 'is' on type definition/rename. %i", p_Tree->getNumLine());
+                l_Result = new tree( Node_C_Define, p_Tree->getSon(0), p_Tree->getSon(1), p_Tree->getNumLine() );
+            }
 			break;
 			
 			case Node_Ada_Renames:

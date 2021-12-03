@@ -40,6 +40,8 @@
 #include "main_unit.h"
 
 #include "../Tools/list_tools.h"
+#include "type.h"
+#include "variable.h"
 
 void displayMainUnitType(t_MainUnitType p_MainUnitType)
 {
@@ -364,8 +366,15 @@ type* main_unit::getType(const char *p_Name)
 			}
 			else
 			{
-				printf("INTERNAL ERROR : %s %i: ambiguity during solve of type \"%s\"\n",__FILE__,__LINE__,p_Name);
-				my_exit(-1);
+				l_Result=(type*)l_List->getItem();
+				printf("INTERNAL ERROR : %s %i: ambiguity during solve of type \"%s\" %i matches found\n",__FILE__,__LINE__,p_Name, l_List->getNbItem());
+                do
+                {
+                    printf("     Match: \"%s\"\n", l_List->getItem()->getName());
+                    displayTypeId(l_List->getItem()->getTypeId());
+                } while (l_List = l_List->getNext());
+                printf("\n  Using first match\n");
+				//my_exit(-1);
 			}
 		}
 	}
@@ -411,8 +420,14 @@ variable* main_unit::getVariable(const char *p_Name)
 			}
 			else
 			{
-				printf("INTERNAL ERROR : %s %i: ambiguity during solve of variable \"%s\"\n",__FILE__,__LINE__,p_Name);
-				my_exit(-1);
+				l_Result=(variable*)l_List->getItem();
+				printf("INTERNAL ERROR : %s %i: ambiguity during solve of variable \"%s\" %i matches found for %s\n",__FILE__,__LINE__,p_Name, l_List->getNbItem(), l_Result->getName());
+                do 
+                {
+                    displayVariableId(l_Result->getVariableId());
+                    printf("\n");
+                } while(l_List = l_List->getNext());
+				//my_exit(-1);
 			}
 		}
 	}

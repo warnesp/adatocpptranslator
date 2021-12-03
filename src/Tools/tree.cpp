@@ -501,15 +501,15 @@ tree* tree::getSon(int p_NumSon)
 	{
 		printf("ERROR  %s %i : asked son number is higher than son number : %i >= %i for ",__FILE__,__LINE__,p_NumSon,m_NbSon);
 		displayNodeType(m_NodeType);
-		printf("\n");
+		printf("\n   %s\n", getString());
 		error=1;
 	}
 	if(m_Sons==NULL)
 	{
-		printf("ERROR : %s %i : \"m_Sons\" is NULL\n",__FILE__,__LINE__);
+		printf("ERROR : %s %i : \"m_Sons\" is NULL    Line %i\n",__FILE__,__LINE__, m_NumLine);
 		error=1;
 	}
-	else
+	else if (error == 0)
 	{
 		if(m_Sons[p_NumSon]==NULL)
 		{
@@ -643,7 +643,7 @@ void tree::setSon(int p_NumSon,tree *p_Tree)
 		printf("ERROR : %s %i : \"m_Sons\" is NULL\n",__FILE__,__LINE__);
 		error=1;
 	}
-	else
+	else if(error == 0)
 	{
 		if(m_Sons[p_NumSon]==NULL)
 		{
